@@ -216,7 +216,7 @@ img{
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 205px;
+  width: 100px;
 }
 h5{
   color: var(--first-color);
