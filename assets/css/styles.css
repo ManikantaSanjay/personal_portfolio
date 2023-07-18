@@ -248,8 +248,8 @@ button{
   row-gap: 2rem;
   text-align: center;
 }
-.about__subtitle{
-  margin-bottom: var(--mb-2);
+.about__subtitle {
+  margin: 2% 15%;
 }
 .about__img{
   justify-self: center;
@@ -258,6 +258,26 @@ button{
   width: 200px;
   border-radius: .5rem;
 }
+
+.about__text {
+  align-self: center;
+  margin: 2% 15%; /* Default margin for larger screens */
+}
+
+/* When the screen size is 768px or less, decrease the margins */
+@media screen and (max-width: 768px) {
+  .about__text {
+    margin: 1.5% 10%;
+  }
+}
+
+/* When the screen size is 480px or less, decrease the margins further */
+@media screen and (max-width: 480px) {
+  .about__text {
+    margin: 1% 10%;
+  }
+}
+
 
 /* ===== SKILLS =====*/
 .skills__container{
