@@ -317,6 +317,8 @@ button{
 
 .timeline-title.active::after {
   content: "\2212"; /* Unicode character for "minus" sign (-) */
+  float: right;
+  margin-left: 5px;
 }
 
 .timeline {
@@ -336,18 +338,35 @@ button{
 
 .carousel {
   width: 100%;
-  overflow: auto;
+  overflow: hidden;
   white-space: nowrap;
+  padding: 10px;
+  margin-bottom: 4%;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .carousel-list {
   display: inline-flex;
-  animation: carousel 20s infinite linear; /* adjust time as needed */
+  animation: scroll 25s linear infinite;
+  flex-wrap: nowrap;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-240px * 7));
+  }
+}
+
 
 .carousel-item {
   flex: 0 0 auto;
-  margin-right: 20px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
   padding: 5px;
   background-color: #f9f9f9;
   border-radius: 5px;
