@@ -83,6 +83,41 @@ function copyToClipboard() {
     document.body.removeChild(el);
 }
 
+// Existing scroll reveal animations...
+
+function copyToClipboard() {
+    const str = document.getElementById('contactno').innerText;
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}
+
+/*===== TIMELINE EXPAND/COLLAPSE FEATURE =====*/
+var coll = document.getElementsByClassName("timeline-title");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+}
+
+
+
+
+
 
 
 
