@@ -114,6 +114,48 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+var contactno = document.getElementById('contactno');
+var copyBox = contactno.querySelector('.copyBox');
+var phoneText = contactno.querySelector('span');
+
+contactno.addEventListener('mouseenter', function() {
+  // Show the copy box when mouse enters the element
+  copyBox.style.display = 'block';
+});
+
+contactno.addEventListener('mouseleave', function() {
+  // Hide the copy box when mouse leaves the element
+  copyBox.style.display = 'none';
+});
+
+copyBox.addEventListener('click', function() {
+  // Create a new textarea element
+  var textarea = document.createElement('textarea');
+  
+  // Set the value of the textarea to the text you want to copy
+  textarea.value = phoneText.textContent;
+  
+  // Append the textarea to the HTML document
+  document.body.appendChild(textarea);
+  
+  // Select the text
+  textarea.select();
+  
+  // Copy the text
+  document.execCommand('copy');
+  
+  // Remove the textarea
+  document.body.removeChild(textarea);
+  
+  // Provide feedback if desired
+  alert("Copied to clipboard");
+});
+
+
+  
+
+
+
 
   
   
