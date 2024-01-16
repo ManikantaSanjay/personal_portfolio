@@ -151,11 +151,135 @@ copyBox.addEventListener('click', function() {
   alert("Copied to clipboard");
 });
 
+function showDetails(id) {
+    var details = document.getElementById(id);
+    if (details.style.display === "none") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}
+
+// Experience dynamic generation
+
+var experienceData = [
+    {
+      "company": "Cognizant",
+      "url": "https://www.cognizant.com/us/en",
+      "duration": "July 2021 - July 2022",
+      "position": "Programmer Analyst - Full Stack Engineering Team",
+      "responsibilities": [
+        "Established high-performance order processing services, using React and NodeJS, ensuring a low latency system for clients; handled over 800+ orders per minute.",
+        "Architected Docker containerized micro-services using Golang for helping customers track real-time orders; resulted in a 30% decrease in average customer support ticket resolution time.",
+        "Orchestrated the deployment of the micro-services on AWS using Kubernetes; enabled the system to handle 5X increase in concurrent user traffic with minimal downtime.",
+      ]
+    },
+    {
+        "company": "Cognizant",
+        "url": "https://www.cognizant.com/us/en",
+        "duration": "March 2021 - July 2021",
+        "position": "Programmer Analyst Trainee - Full Stack Engineering Team",
+        "responsibilities": [
+          "Engineered an internal support tool with customizable dashboards and reports, empowering team leaders to analyze trends, identify areas for improvement; facilitated access to real-time customer support metrics and ticketing data",
+          "Streamlined GraphQL integration with the Python backend; led to 15% improvement in data query efficiency."
+        ]
+      },
+      {
+        "company": "Agent Technologies Pvt. Ltd",
+        "url": "http://www.agenttech.org/",
+        "duration": "February 2020 - October 2020",
+        "position": "Software Developer Intern",
+        "responsibilities": [
+          "Created MATLAB scripts and functions to analyze large datasets collected from sensors of home automation systems.",
+          "Revamped the user experience by developing interactive MATLAB GUIs for customers, resulting in a 20% increase in overall customer satisfaction ratings and a 35% improvement in user engagement."
+        ]
+      },
+    
+  ];
+  
+// Experience dynamic generation
+
+
+window.onload = function() {
+  var experienceContainer = document.querySelector('#experience .container');
+
+  experienceData.forEach(function(workExperience,index) {
+    var row = document.createElement('div');
+    row.className = 'row mt-4 mt-md-0';
+
+    var leftCol = document.createElement('div');
+    leftCol.className = 'col-lg-6 col-md-12 icon-box';
+    leftCol.setAttribute('data-aos', 'fade-up');
+    leftCol.setAttribute('data-aos-delay', '100');
+
+    var h4 = document.createElement('h4');
+    h4.style.textAlign = 'left';
+
+    var link = document.createElement('a');
+    link.href = workExperience.url;
+    link.style.color = '#4070F4';
+    link.textContent = workExperience.company;
+
+    h4.appendChild(link);
+    leftCol.appendChild(h4);
+
+    var h5 = document.createElement('h5');
+    h5.style.textAlign = 'left';
+    h5.style.color = 'black';
+    h5.textContent = workExperience.duration;
+    leftCol.appendChild(h5);
+
+    var p = document.createElement('p');
+    p.style.textAlign = 'left';
+    p.style.color = 'black';
+    var em = document.createElement('em');
+    em.textContent = workExperience.position;
+    p.appendChild(em);
+    leftCol.appendChild(p);
+
+    leftCol.addEventListener('click', function() {
+      // first hide all other rightCols
+      var allRightCols = document.querySelectorAll('.rightCol');
+      allRightCols.forEach(function(col) {
+        col.style.display = 'none';
+      });
+
+      // then display the clicked one
+      var rightCol = document.getElementById(`rightCol-${index}`);
+      rightCol.style.display = 'block';
+
+      // move the leftCol to the left
+      this.className = 'col-lg-3';
+    });
+
+    row.appendChild(leftCol);
+
+    var rightCol = document.createElement('div');
+    rightCol.className = 'col-lg-6 col-md-12 icon-box';
+    rightCol.setAttribute('data-aos', 'fade-up');
+    rightCol.setAttribute('data-aos-delay', '100');
+
+    var ul = document.createElement('ul');
+    ul.style.textAlign = 'left';
+    workExperience.responsibilities.forEach(function(responsibility) {
+      var li = document.createElement('li');
+      li.textContent = responsibility;
+      ul.appendChild(li);
+    });
+
+    rightCol.style.display = 'none';
+    rightCol.id = `rightCol-${index}`;
+    rightCol.className = `rightCol col-lg-9`; 
+
+    rightCol.appendChild(ul);
+    row.appendChild(rightCol);
+    
+    experienceContainer.appendChild(row);
+  });
+};
+
 
   
-
-
-
 
   
   

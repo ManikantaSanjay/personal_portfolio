@@ -438,69 +438,167 @@ button{
 }
 
 
+/* ======== EXPERIENCE ======*/
+/* -------------------------------------------------------------- */
+.services {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.services .icon-box {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 40px 40px;
+  transition: all ease-in-out 0.3s;
+  margin: 20px auto;
+  flex: 1 0 48%; /* Add this line to make each .icon-box take up roughly half the width */
+  box-sizing: border-box; /* Add this line to include padding and border in the element's total width */
+}
+
+/* Other existing CSS rules */
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  background: var(--first-color);
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services .col-md-6 {
+  flex: 1;
+}
+
+.icon-box.leftCol {
+  margin: 0 auto;
+  height: auto; /* Change this to the desired height */
+}
+
+.icon-box.rightCol {
+  height: 80%; /* Or any other height */
+}
+
+
+
+.icon-box.rightCol:empty {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 
 /* ===== SKILLS =====*/
-.skills__container{
-  row-gap: 2rem;
-  text-align: center;
+/* Component-specific styles */
+
+.skills__container {
+  background-color: #f9f9f9; /* Light grey background for the container */
+  margin: 10px auto; /* Center the container with automatic horizontal margins */
+  padding: 10px 0; /* Vertical padding only */
+  border-radius: 8px; /* Rounded corners */
+  display: flex; /* Use flexbox to center children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
 }
-.skills__subtitle{
-  margin-bottom: var(--mb-2);
+
+.skills__name {
+  color: black; /* This sets the text color to white */
 }
-.skills__text{
-  margin-bottom: var(--mb-4);
+
+/* Rest of the styles remain the same */
+.skills__subtitle {
+  color: black;
+  text-align: center; /* Centers the text horizontally within its containing element */
+  padding-bottom: 5px; /* Provides space between the text and the border */
+  border-bottom: 2px solid white; /* Creates a white bottom border */
+  display: block; /* Allows the element to take the full width */
+  width: 100%; /* Ensures the element stretches from left to right */
+  margin-bottom: 10px; 
 }
-.skills__data{
+
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr); /* 5 items across */
+  gap: 60px; /* This sets the gap between items */
+  padding: 20px 90px; 
+  justify-content: space-around; 
+}
+
+.skill-item {
+  /* Removed max-width to allow grid to handle sizing */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  font-weight: var(--font-semi);
-  padding: .5rem 1rem;
-  margin-bottom: var(--mb-4);
-  border-radius: .5rem;
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  flex-direction: column;
+  justify-self: center; /* Horizontally center the content of the grid cell */
+  align-self: center; 
+  /* If you want to ensure each item is the same width, you can set a fixed width */
+  width: 100%; /* Each item will try to take up 100% of its grid cell */
 }
-.skills__icon{
-  font-size: 2rem;
-  margin-right: var(--mb-2);
-  color: var(--first-color);
+
+.skills__icon {
+  font-size: 2.5rem; /* Adjust icon size */
+  margin-bottom: 10px;
 }
-.skills__names{
-  display: flex;
-  align-items: center;
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .skills__grid {
+      grid-template-columns: repeat(4, 1fr); /* 3 items across on smaller screens */
+      /* If the total width is less than 5 items + gaps */
+      justify-content: space-around; /* This will distribute space evenly */
+  }
 }
-.skills__bar{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: var(--first-color);
-  height: .25rem;
-  border-radius: .5rem;
-  z-index: var(--z-back);
+
+@media screen and (max-width: 480px) {
+  .skills__grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 items across on very small screens */
+      /* If the total width is less than 3 items + gaps */
+      justify-content: space-around; /* This will distribute space evenly */
+  }
 }
-.skills__cplusplus{
-  width: 95%;
+
+.skills__container:hover {
+  background-color: #4070F4; /* Replace with the shade of blue you want */
+  transition: background-color 0.3s; /* Smooth transition for the color change */
+  color: #FFFFFF; 
 }
-.skills__java{
-  width: 85%;
+
+.skills__container:hover .skills__subtitle {
+  color: #FFFFFF; /* Changes subtitle text color to white when the container is hovered */
+  transition: color 0.3s; /* Smooth transition for text color */
 }
-.skills__js{
-  width: 65%;
+
+.skills__container:hover .skills__name {
+  color: white; /* Smooth transition for the transform */
 }
-.skills__python{
-  width: 75%;
-}
-.skills__sql{
-  width:70%;
-}
-.skills__img{
-  border-radius: .5rem;
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
-  
-}
+
+
+
+
+
+/* Responsive adjustments may be necessary here */
+
+
 
 /* ===== WORK =====*/
 .work__container{
