@@ -24,24 +24,31 @@ function linkAction(){
   navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
-document.getElementById("work1").onclick = function () {
-        location.href = "https://github.com/ManikantaSanjay/indian_number_plate_character_recognition";
-    };
-    document.getElementById("work2").onclick = function () {
-        location.href = "https://github.com/ManikantaSanjay/crop_yield_prediction_regression";
-    };
-    document.getElementById("work3").onclick = function () {
-        location.href = "https://github.com/ManikantaSanjay/Emotion_Prediction_Kaggle_CNN";
-    };
-    document.getElementById("work4").onclick = function () {
-        location.href = "https://github.com/ManikantaSanjay/Medical_Care_Management_System";
-    };
-    document.getElementById("work5").onclick = function () {
-        location.href = "https://github.com/ManikantaSanjay/Electric_Billing_System";
-    };
-    document.getElementById("work6").onclick = function () {
-        location.href = "https://github.com/ManikantaSanjay/patatap-mini-clone_javascript";
-    };
+
+document.querySelector('#work1 h5').addEventListener('click', function() {
+  window.location.href = "https://github.com/ManikantaSanjay/indian_number_plate_character_recognition";
+});
+
+    document.querySelector("#work2 h5").addEventListener('click', function()  {
+        location.href = "https://github.com/ManikantaSanjay/web-scraper-rust";
+    });
+
+    document.querySelector('#work3 h5').addEventListener('click', function() {
+      location.href = "https://github.com/AshishAgarwal2101/cs-286nlp-project";
+    });
+
+    document.querySelector('#work4 h5').addEventListener('click', function() {
+      location.href = "https://github.com/ManikantaSanjay/Medical_Care_Management_System";
+    });
+
+    document.querySelector('#work5 h5').addEventListener('click', function() {
+      location.href = "https://drive.google.com/file/d/1CA0DWb6Rk0NKYJ-JETezUpgRrKFu-a68/view";
+    });
+
+    document.querySelector('#work6 h5').addEventListener('click', function() {
+      location.href = "https://drive.google.com/file/d/1V3MPkaS_W5Dntl6K8w2hoaCWDlsqw99w/view";
+    });
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
@@ -277,6 +284,44 @@ window.onload = function() {
     experienceContainer.appendChild(row);
   });
 };
+
+document.querySelectorAll('.menu-trigger').forEach(item => {
+  item.addEventListener('click', () => {
+      // Toggle the visibility of the description bar
+      const workImg = item.closest('.work__img');
+      workImg.classList.toggle('show-description');
+  });
+});
+
+function autoScrollDescriptionBar() {
+  const descriptionBar = document.querySelector('.description-bar');
+  const content = document.querySelector('.scrollable-content');
+
+  let scrollAmount = 0; // Starting scroll position
+  const step = 1; // How much to move each interval (in pixels)
+  const delay = 30; // Delay between each movement (in milliseconds)
+  const resetDelay = 100; // Delay before scrolling resets (in milliseconds)
+
+  function stepScroll() {
+      const maxScrollHeight = content.scrollHeight - descriptionBar.clientHeight;
+
+      if (scrollAmount < maxScrollHeight) {
+          scrollAmount += step;
+          content.style.top = -scrollAmount + 'px';
+      } else {
+          setTimeout(() => {
+              scrollAmount = 0; // Reset scroll amount
+              content.style.top = '0px'; // Reset position
+          }, resetDelay);
+      }
+  }
+
+  setInterval(stepScroll, delay);
+}
+
+autoScrollDescriptionBar(); // Call the function
+
+
 
 
   

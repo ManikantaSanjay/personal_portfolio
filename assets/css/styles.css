@@ -438,65 +438,6 @@ button{
 }
 
 
-/* ======== EXPERIENCE ======*/
-/* -------------------------------------------------------------- */
-.services {
-  max-width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-}
-
-.services .icon-box {
-  text-align: center;
-  background: #f9f9f9;
-  padding: 40px 40px;
-  transition: all ease-in-out 0.3s;
-  margin: 20px auto;
-  flex: 1 0 48%; /* Add this line to make each .icon-box take up roughly half the width */
-  box-sizing: border-box; /* Add this line to include padding and border in the element's total width */
-}
-
-/* Other existing CSS rules */
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 17px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  background: var(--first-color);
-}
-
-.services .icon-box:hover .icon {
-  background: #fff;
-}
-
-.services .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.services .col-md-6 {
-  flex: 1;
-}
-
-.icon-box.leftCol {
-  margin: 0 auto;
-  height: auto; /* Change this to the desired height */
-}
-
-.icon-box.rightCol {
-  height: 80%; /* Or any other height */
-}
-
-
-
-.icon-box.rightCol:empty {
-  display: none;
-}
-
 
 
 
@@ -596,8 +537,134 @@ button{
 
 
 
-/* Responsive adjustments may be necessary here */
+/* ================EXPERIENCE============ */
+.experience {
+  font-family: 'Arial', sans-serif; /* Use a font similar to the one in the image */
+  color: #333; /* Standard text color, adjust as needed */
+}
 
+.experience__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.experience__item {
+  background-color: #f8f8f8; /* Light grey background, similar to the image */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Spacing inside the item */
+  margin-bottom: 10px; /* Space between experience items */
+}
+
+.experience__header {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  position: relative;
+  justify-content: space-between; /* This will create space between the two columns */
+  margin-bottom: 20px;
+}
+
+.experience__header::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Align with the left edge of the experience__header */
+  right: 0; /* Align with the right edge of the experience__header */
+  bottom: -10px; /* Position just below the experience__header */
+  border-bottom: 2px solid white; /* White border for the line */
+  width: 100%; /* Full width of the container */
+}
+
+
+
+.experience__position {
+  font-size: 18px;
+  
+/* Adjust size as needed /
+font-weight: bold;
+color: #000; / Black or a dark color for the position */
+}
+
+.experience__company {
+font-size: 16px;
+color: #555; /* Slightly lighter than the position color */
+}
+
+.experience__location {
+  justify-self: end; /* Aligns the location to the end of the grid area */
+}
+
+.experience__year {
+justify-self: end;
+padding-left: 50px;
+font-size: 14px;
+color: #666; /* Even lighter for the date /
+margin-bottom: 15px; / Space before the description */
+}
+
+.experience__description {
+list-style-type:disc; /* Removes bullet points */
+padding: 0;
+margin-top: 10px; /* Adjust the value as needed for top margin */
+margin-left: 20px; /* Adjust the value as needed for left margin */
+margin-right: 10px;
+}
+
+.experience__description li {
+font-size: 14px;
+line-height: 1.5; /* Spacing between lines /
+margin-bottom: 10px; / Spacing between list items */
+text-align:justify;
+}
+
+.experience__tools {
+font-style: italic;
+color: #333;
+font-size: 14px;
+margin-top: 15px; /* Space above the tools section */
+}
+
+/* Hover effect for the entire experience item */
+.experience__item:hover {
+  background-color: var(--first-color); /* Royal blue background on hover */
+   /* White text on hover */
+}
+
+/* Ensure that the position, company, year, and tools also turn white on hover */
+.experience__item:hover .experience__position {
+  font-size: calc(18px * 1.2); /* 20% larger than 18px */
+  color: #fbbc14;
+  font-weight: bold;
+}
+
+.experience__item:hover .experience__company{
+  font-size: calc(16px * 1.2); /* 20% larger than 16px */
+  color: white;
+  font-weight: bold;
+}
+
+.experience__item:hover .experience__location {
+  font-size: calc(16px * 1.2); /* 20% larger than 16px */
+  color: #fbbc14;
+  font-weight: bold;
+}
+
+.experience__item:hover .experience__year {
+  font-size: calc(14px * 1.2); /* 20% larger than 14px */
+  color: white;
+  font-weight: bold;
+}
+
+.experience__item:hover .experience__tools {
+  font-size: calc(14px * 1.2); /* Assuming tools have the same initial font-size as year */
+  color: #fbbc14;
+  font-weight: bold;
+}
+
+/* Make description text bold on hover */
+.experience__item:hover .experience__description li {
+  color: white;
+}
 
 
 /* ===== WORK =====*/
@@ -616,11 +683,74 @@ button{
   transition: 1s;
   cursor: pointer;
   margin-bottom: 20px;
+
 }
+
 .work__img img:hover{
   transform: scale(1.1); 
 
 }
+
+.work__menu {
+  position: relative;
+}
+
+.menu-trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 24px; /* or any appropriate size */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.description-bar {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent; /* Set the default background color to transparent */
+  transition: background-color 2s, opacity 1s;
+  
+  /* Add more styles for your description bar here */
+}
+
+.description-bar ul {
+  margin-top: 10px; /* Adjust the value as needed for top margin */
+  margin-left: 20px; /* Adjust the value as needed for left margin */
+  margin-right: 10px;
+  list-style-type: disc; /* This creates the bullet point style */
+}
+
+.description-bar li {
+  margin-bottom: 10px; /* Adds space between bullet points if you have multiple */
+  font-size: 12px;
+  font-weight: bold;
+  text-align: justify; 
+}
+
+.scrollable-content {
+  position: relative;
+  max-height: 220px;
+  padding: 10px;
+  top: 0; /* Start at the top */
+  right: 0;
+  left: 0;
+}
+
+.work__img.show-description img {
+  opacity: 0.2; 
+}
+
+.show-description .description-bar {
+  display: block;
+  background-color: #4070F4; /* This will be the background color after activation */
+  color: white;
+  /* ... other styles ... */
+}
+
 /* ===== CONTACT =====*/
 .contact__input{
   width: 100%;
