@@ -303,6 +303,7 @@ button{
   padding-top: 100px;
 }
 .about__subtitle {
+  color: var(--first-color);
   margin: 2% 15%;
 }
 
@@ -595,6 +596,7 @@ color: #555; /* Slightly lighter than the position color */
 }
 
 .experience__year {
+float: right;
 justify-self: end;
 padding-left: 50px;
 font-size: 14px;
@@ -666,8 +668,78 @@ margin-top: 15px; /* Space above the tools section */
   color: white;
 }
 
+.experience__timeline:hover .experience__company,
+.experience__timeline:hover .experience__year {
+  color: var(--first-color);
+}
+
+/* Make description text bold on hover */
+.experience__timeline:hover .experience__description li {
+  color: black;
+}
+
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 20px;
+  /* This padding-top should be equal or more than the height of the .timeline__content:before to prevent overlap */
+  padding-top: 30px;
+}
+
+.timeline__content {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1; /* Ensures the content is above the pseudo-element line */
+}
+
+.timeline__content:before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 10px; /* Adjusted to align with the center of the dot */
+  height: 10px;
+  width: 10px;
+  background: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  z-index: 2; /* Ensures the dot is above the line */
+}
+
+.timeline__item:not(:last-child):after {
+  content: '';
+  position: absolute;
+  left: -11px; /* Centers the line with the dot. Adjust as necessary. */
+  top: 45px; /* Starts the line at the bottom of the dot */
+  height: calc(100% + 20px); /* Height to reach up to the next dot */
+  width: 2px; /* Width of the line */
+  background-color: #ccc; /* Color of the line */
+  z-index: 0; /* Ensures the line is behind the content and dot */
+}
+
+
+
 
 /* ===== WORK =====*/
+.header-with-icon {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-with-icon:hover {
+  color: black; /* This will change the text color to black on hover */
+}
+
+.skills__icon--small {
+  margin-top: 5px;
+  font-size: 20px; /* or any other size */
+  margin-left: 12px; /* Adjust the spacing as needed */
+}
+
 .work__container{
   row-gap: 2rem;
 
@@ -770,6 +842,62 @@ margin-top: 15px; /* Space above the tools section */
   cursor: pointer;
   margin-left: auto;
 }
+
+
+/*========= PUBLICATIONS========*/
+
+.timeline__content {
+  margin-bottom: 5px;
+}
+
+.publications__date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block; /* Ensures the date is on its own line */
+  width: 90%; /* Same width as .publication__entry for alignment */
+  margin-left: auto; /* Center align the date */
+  margin-right: auto; /* Center align the date */
+}
+
+.publication__entry {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-left: 3px solid var(--first-color);
+  margin-bottom: 15px; /* Space between entries */
+  width: 90%;
+  margin-left: auto; /* Automatically adjust left margin */
+  margin-right: auto; /* Automatically adjust right margin */
+}
+
+
+.publication__title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.publication__link {
+  font-size: 16px;
+  color: var(--first-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.publication__link:hover {
+  text-decoration: underline;
+}
+
+.publication__details {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+/*=======  ========== */
 
 /* ===== FOOTER =====*/
 .footer{

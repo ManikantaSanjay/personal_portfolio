@@ -36,7 +36,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Student at San Jose State University, San Jose, CA</a>
+                    <a href="#" class="nav__logo">Student at SJSU, San Jose, CA</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -47,6 +47,7 @@
                         <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
                     </ul>
                 </div>
 
@@ -218,27 +219,56 @@
                     
                     <div class="experience__item">
                         <div class="experience__header">
-                        <h3 class="experience__position">Cognizant
-                        </h3>
+                        <h3 class="experience__position">Cognizant </h3>
                           <span class = "experience__location">
                             <span class="iconify" data-icon="mdi:map-marker" data-inline="false"></span>
                              Bengaluru, India
                           </span>
-                        
-                        <span class="experience__company">Programmer Analyst - AI and Data Analytics</span>
-                        <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                            July 2021 - July 2022</span>
-                            
                         </div>
-                        <ul class="experience__description">
-                            <li>Implemented predictive modeling using TensorFlow for financial services client, focusing on credit risk assessment; led to 23% reduction in loan defaults within six months. </li>
-                            <li> Performed distributed ML training with JAX, CuML, and CuDF libraries for accelerated data workflows, achieving 12% reduction in operational expenses, saving client $1,500,000 annually in CapEx. </li>
-                            <li>Integrated MLflow for deployment and versioning of TensorFlow models; facilitated consistent performance tracking.</li>
-                            <li>Improved data extraction and analysis with tailored SQL queries, aiding strategic decisions for key clients.</li>
-                            <li>Devised end-to-end time series forecasting model to predict household power consumption using deep neural networks; consistently outperformed human and baseline risk assessment strategies by 6-8%. </li>
-                        </ul>
-                        <div class="experience__tools">Tools: Python, TensorFlow, PyTorch, Azure, AWS, CUDA, SQL</div>
+
+
+                        <div class="experience__timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__content">
+
+                                    <span class="experience__company">Programmer Analyst - AI and Data Analytics</span>
+                                    <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
+                                        July 2021 - July 2022</span>
+                                        
+                                    
+                                    <ul class="experience__description">
+                                        <li>Implemented predictive modeling using TensorFlow for financial services client, focusing on credit risk assessment; led to 23% reduction in loan defaults within six months. </li>
+                                        <li> Performed distributed ML training with JAX, CuML, and CuDF libraries for accelerated data workflows, achieving 12% reduction in operational expenses, saving client $1,500,000 annually in CapEx. </li>
+                                        <li>Integrated MLflow for deployment and versioning of TensorFlow models; facilitated consistent performance tracking.</li>
+                                        <li>Improved data extraction and analysis with tailored SQL queries, aiding strategic decisions for key clients.</li>
+                                        <li>Devised end-to-end time series forecasting model to predict household power consumption using deep neural networks; consistently outperformed human and baseline risk assessment strategies by 6-8%. </li>
+                                    </ul>
+                                    <div class="experience__tools">Tools: Python, TensorFlow, PyTorch, Azure, AWS, CUDA, SQL</div>
+                
+                                </div>
+                            </div>
+
+                            <div class="timeline__item">
+                                <div class="timeline__content">
+                    
+                        
+                                    <span class="experience__company">Programmer Analyst Trainee - AI and Data Analytics</span>
+                                    <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
+                                        March 2021 - June 2021</span>
+                                        
+                                    
+                                    <ul class="experience__description">
+                                    <li>Utilized Bayesian probabilistic modeling to develop predictive churn models, accurately identifying at-risk customers; resulted in 25% reduction in attrition and revenue increase of $500,000. </li>
+                                    <li>Streamlined ingestion of data from 10+ disparate data sources (in CSV, XML, JSON formats) into GCP by transforming data using SQL and R and automated BigQuery schema provisioning with Terraform. </li>
+                                    </ul>
+                                    <div class="experience__tools">Tools: Python, R, Google BigQuery, Terraform, MySQL, GCP, JavaScript, REST APIs, Docker, Kubernetes</div>
+                            
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
 
                 <div class="experience__container bd-grid">
@@ -584,7 +614,10 @@
                             </div>
                     </div>
                         <img src="assets/img/numberplate.png" alt="">
-                        <h5><center>Indian Number Plate Recognition</center></h5>
+                        <h5 class="header-with-icon">
+                            Indian Number Plate Recognition
+                            <span class="iconify skills__icon skills__icon--small" data-icon="mdi:github" data-inline="false"></span>
+                        </h5>
                 </div>
 
                     <div class="work__img" id="work2">
@@ -599,7 +632,11 @@
                             </div>
                         </div>
                         <img src="assets/img/webscraper.png" alt="">
-                        <h5><center>Life Expectancy Web Scraper and Analysis</center></h5>
+                        <h5 class="header-with-icon">
+                            Life Expectancy Web Scraper
+                            <span class="iconify skills__icon skills__icon--small" data-icon="mdi:github" data-inline="false"></span>
+                        </h5>
+        
                     </div>
                     <div class="work__img" id="work3">
                         <div class="work__menu">
@@ -614,7 +651,11 @@
                             </div>
                         </div>
                         <img src="assets/img/english.png" alt="">
-                        <h5><center>Language Proficiency Checker</center></h5>
+                        <h5 class="header-with-icon">
+                            Language Proficiency Checker
+                            <span class="iconify skills__icon skills__icon--small" data-icon="mdi:github" data-inline="false"></span>
+                        </h5>
+                        
                     </div>
                     <div class="work__img" id="work4">
                         <div class="work__menu">
@@ -629,7 +670,10 @@
                             </div>
                         </div>
                         <img src="assets/img/medicalcare.jpg" alt="">
-                        <h5><center>Medical Care Management System</center></h5>
+                        <h5 class="header-with-icon">
+                            Medical Care Management System
+                            <span class="iconify skills__icon skills__icon--small" data-icon="mdi:github" data-inline="false"></span>
+                        </h5>
                     </div>
                     <div class="work__img" id="work5">
                         <div class="work__menu">
@@ -644,7 +688,10 @@
                             </div>
                         </div>
                         <img src="assets/img/malware.png" alt="">
-                        <h5><center>Concept Drift Detection</center></h5>
+                        <h5 class="header-with-icon">
+                            Concept Drift Detection
+                            <span class="iconify skills__icon skills__icon--small" data-icon="tabler:external-link" data-inline="false"></span>
+                        </h5>
                     </div>
                     <div class="work__img" id="work6">
                         <div class="work__menu">
@@ -664,10 +711,129 @@
                             </div>
                         </div>
                         <img src="assets/img/soil.png" alt="">
-                        <h5><center>Live Soil Monitoring and Analysis</center></h5>
+                        <h5 class="header-with-icon">
+                            Live Soil Monitoring and Analysis
+                            <span class="iconify skills__icon skills__icon--small" data-icon="tabler:external-link" data-inline="false"></span>
+                        </h5>
                     </div>
                 </div>
             </section>
+
+        <!--Publications-->
+        <section class="publications section" id="publications">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications__section">
+                <div class="timeline__items">
+                    <div class="timeline__content">
+                        <span class="publications__date">May, 2023</span>
+                        <div class="publication__entry">
+                            <span class="publication__title">
+                                Time Series AutoML: Hierarchical Factor Based Forecasting</span>
+                                
+                            <span class="publication__details">Springer - International Conference on Data Management, Analytics & Innovation (ICDMAI) </span>
+                            <a href="https://doi.org/10.1007/978-981-99-1414-2_17" class="publication__link">[link]</a>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__items">
+                    <div class="timeline__content">
+                        <span class="publications__date">July, 2022</span>
+
+                        <div class="publication__entry">
+                            <span class="publication__title">Data Scientist Job Change Prediction Using Machine Learning Classification Techniques</span>
+                            
+                            <span class="publication__details">Springer - Ubiquitous Intelligent Information Systems (ICUIS) </span>
+                            <a href="https://doi.org/10.1007/978-981-19-2541-2_17" class="publication__link">[link]</a>
+                            
+                        </div>
+                        <!-- Additional publication__entry blocks as needed for more publications in the same month -->
+                    </div>
+                </div>
+
+                <div class="timeline__items">
+                    <div class="timeline__content">
+                        <span class="publications__date">May, 2022</span>
+
+                        <div class="publication__entry">
+                            <span class="publication__title">Anxiety Prediction during Stressful Scenarios</span>
+                            
+                            <span class="publication__details">IEEE - 2022 6th International Conference on Intelligent Computing and Control Systems (ICICCS) </span>
+                            <a href="https://doi.org/10.1109/ICICCS53718.2022.9788151" class="publication__link">[link]</a>
+                            
+                        </div>
+                        <!-- Additional publication__entry blocks as needed for more publications in the same month -->
+                    </div>
+                </div>
+
+                <div class="timeline__items">
+                    <div class="timeline__content">
+                        <span class="publications__date">March, 2022</span>
+
+                        <div class="publication__entry">
+                            <span class="publication__title">
+                                Mental Health At Work Prediction Using Neural Networks</span>
+                            
+                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems (ICACCS) </span>
+                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785283" class="publication__link">[link]</a>
+                            
+                        </div>
+                        <!-- Additional publication__entry blocks as needed for more publications in the same month -->
+                        <div class="publication__entry">
+                            <span class="publication__title">Comparative Analysis of Skin cancer Prediction</span>
+                            
+                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems (ICACCS) </span>
+                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785079" class="publication__link">[link]</a>
+                            
+                        </div>
+
+                        <div class="publication__entry">
+                            <span class="publication__title">
+                                Lethargy Detection during work using Keras Deep learning</span>
+                            
+                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems (ICACCS) </span>
+                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785330" class="publication__link">[link]</a>
+                            
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+                <div class="timeline__items">
+                    <div class="timeline__content">
+                        <span class="publications__date">January, 2022</span>
+
+                        <div class="publication__entry">
+                            <span class="publication__title">Novel Approach to Classification of Ayurvedic Medicinal Plants</span>
+                            
+                            <span class="publication__details">International Journal of Engineering Research & Technology (IJERT) </span>
+                            <a href="https://www.ijert.org/a-novel-approach-to-classification-of-ayurvedic-medicinal-plants-using-neural-networks" class="publication__link">[link]</a>
+                            
+                        </div>
+                        <!-- Additional publication__entry blocks as needed for more publications in the same month -->
+                    </div>
+                </div>
+
+                <div class="timeline__items">
+                    <div class="timeline__content">
+                        <span class="publications__date">December, 2021</span>
+
+                        <div class="publication__entry">
+                            <span class="publication__title">Deep Learning Approach for COVID-19 Detection and Diagnosis using ResNet</span>
+                            
+                            <span class="publication__details">International Journal of Engineering Research & Technology (IJERT) </span>
+                            <a href="https://www.ijert.org/a-deep-learning-approach-for-covid-19-detection-and-diagnosis-using-resnet-architecture" class="publication__link">[link]</a>
+                            
+                        </div>
+                        <!-- Additional publication__entry blocks as needed for more publications in the same month -->
+                    </div>
+                </div>
+                <!-- Repeat the above block for each month that has publications -->
+            </div>
+        </section>
+
 
             
         </main>
@@ -675,9 +841,13 @@
         <!--===== FOOTER =====-->
         <footer class="footer">
             <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=100006686528463" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="https://www.instagram.com/manikantasanjaykumar/?hl=en" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="https://twitter.com/manikantasanjay" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100006686528463" class="footer__icon"><i class='bx bxl-facebook' ></i>
+                
+                </a>
+                <a href="https://www.instagram.com/manikantasanjaykumar/?hl=en" class="footer__icon"><i class='bx bxl-instagram' ></i>
+                
+                </a>
+                <a href="https://twitter.com/manikantasanjay" class="footer__icon"><i class='bx bxl-twitter' ></i> </a>
             </div>
             <div class="footer__content" id="contactno">
                 <span>Mobile No : +1 (424) 235-6951</span>
