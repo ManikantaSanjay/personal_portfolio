@@ -1005,10 +1005,25 @@ margin-top: 15px; /* Space above the tools section */
   
   
 
-  .home__img{
+  .home__img {
     width: 457px;
     bottom: 15%;
-  }
+    box-shadow: 
+        0 8px 8px 0 black, 
+        0 15px 20px 0 var(--first-color), /* Outer shadows */
+        inset 0 0 0 10px black; /* Inset shadow acting as an inner border */
+    transition: transform 0.3s ease; /* Smooth transition effect on hover */
+}
+
+.home__img:hover {
+    transform: scale(1.05); /* Scales the image up slightly on hover */
+    box-shadow: 
+        0 8px 16px 0 rgba(0, 0, 0, 0.2), 
+        0 12px 40px 0 rgba(0, 0, 0, 0.24), /* Increased outer shadows on hover */
+        inset 0 0 0 10px black; /* Maintaining the inset shadow on hover */
+}
+
+  
 
   .about__container, .skills__container{
     grid-template-columns: repeat(2,1fr);
