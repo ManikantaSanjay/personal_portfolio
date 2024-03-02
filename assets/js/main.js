@@ -30,7 +30,7 @@ document.querySelector('#work1 h5').addEventListener('click', function() {
 });
 
     document.querySelector("#work2 h5").addEventListener('click', function()  {
-        location.href = "https://github.com/ManikantaSanjay/web-scraper-rust";
+        location.href = "https://devpost.com/software/weheal";
     });
 
     document.querySelector('#work3 h5').addEventListener('click', function() {
@@ -319,6 +319,8 @@ function autoScrollDescriptionBar() {
 }
 
 autoScrollDescriptionBar(); // Call the function
+
+
 
 
 

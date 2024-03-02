@@ -354,7 +354,7 @@ button{
 
 .timeline-title:hover {
   background: var(--first-color); /* Adjusted color to match other sections */
-  color: #fff; /* Adjusted color to match other sections */
+   /* Adjusted color to match other sections */
 }
 
 .timeline-title::after {
@@ -670,7 +670,8 @@ margin-top: 15px; /* Space above the tools section */
 
 .experience__timeline:hover .experience__company,
 .experience__timeline:hover .experience__year {
-  color: var(--first-color);
+  color: var(--first-color
+  );
 }
 
 /* Make description text bold on hover */
@@ -1058,3 +1059,5 @@ margin-top: 15px; /* Space above the tools section */
     right: 10%;
   }
 }
+
+
