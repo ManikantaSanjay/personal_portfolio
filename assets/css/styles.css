@@ -728,6 +728,7 @@ margin-top: 15px; /* Space above the tools section */
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .header-with-icon:hover {
@@ -928,6 +929,7 @@ margin-top: 15px; /* Space above the tools section */
   margin-bottom: var(--mb-0);
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .footer__content:hover{
   color: black;
@@ -944,6 +946,7 @@ margin-top: 15px; /* Space above the tools section */
     background-color: white; /* adjust color as needed */
     border-radius: 5px;
     font-size: 15px;
+    cursor: pointer;
   /* Add other styles as needed */
 }
 
