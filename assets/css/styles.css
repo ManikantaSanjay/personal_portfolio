@@ -355,6 +355,7 @@ button{
 .timeline-title:hover {
   background: var(--first-color); /* Adjusted color to match other sections */
    /* Adjusted color to match other sections */
+  color: white;
 }
 
 .timeline-title::after {
