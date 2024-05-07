@@ -21,7 +21,7 @@ You can see the live version of the website here: [Visit Portfolio](https://msve
 
 ## Screenshots
 
-![Homepage](/assets/images/homepage.png)
+![Homepage](/assets/img/homepage.png)
 *Homepage of the portfolio showcasing the introduction section.*
 
 ## Local Setup
