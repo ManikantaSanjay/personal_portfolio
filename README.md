@@ -33,7 +33,7 @@ You can see the live version of the website here: [Visit Portfolio](https://msve
 ![Projects](/assets/img/projects.png)
 *Projects section.*
 
-![Publications](/assets/publications.png)
+![Publications](/assets/img/publications.png)
 *Publications section.*
 
 
