@@ -24,6 +24,19 @@ You can see the live version of the website here: [Visit Portfolio](https://msve
 ![Homepage](/assets/img/homepage.png)
 *Homepage of the portfolio showcasing the introduction section.*
 
+![Eduction](/assets/img/education.png)
+*Education section.*
+
+![Skills](/assets/img/skills.png)
+*Skills section.*
+
+![Projects](/assets/img/projects.png)
+*Projects section.*
+
+![Publications](/assets/publications.png)
+*Publications section.*
+
+
 ## Local Setup
 
 To get a local copy up and running follow these simple steps:
