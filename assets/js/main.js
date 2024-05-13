@@ -284,11 +284,16 @@ window.onload = function() {
   });
 };
 
-document.querySelectorAll('.menu-trigger').forEach(item => {
-  item.addEventListener('click', () => {
-      // Toggle the visibility of the description bar
-      const workImg = item.closest('.work__img');
-      workImg.classList.toggle('show-description');
+// document.querySelectorAll('.menu-trigger').forEach(item => {
+//   item.addEventListener('click', () => {
+//       // Toggle the visibility of the description bar
+//       const workImg = item.closest('.work__img');
+//       workImg.classList.toggle('show-description');
+//   });
+// });
+document.querySelectorAll('.menu-trigger').forEach(button => {
+  button.addEventListener('click', function() {
+      this.nextElementSibling.style.display = 'block'; // Shows the description bar
   });
 });
 
