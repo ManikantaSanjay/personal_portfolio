@@ -1,6 +1,6 @@
-# Personal Portfolio Website
+# Personal Portfolio Website (SJSU Themed)
 
-Welcome to the GitHub repository for my personal portfolio website! This site is designed to showcase my professional skills, projects, and academic journey in the fields of Machine Learning, Data Science, and Software Development. It serves as a dynamic platform to reflect my professional persona and technical expertise.
+Welcome to the GitHub repository for my personal portfolio website! This site is inspired by the logo design colors of my university, SJSU and is designed to showcase my professional skills, projects, and academic journey in the fields of Machine Learning, Data Science, and Software Development. It serves as a dynamic platform to reflect my professional persona and technical expertise.
 
 ## Features
 
