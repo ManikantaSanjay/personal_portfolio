@@ -21,7 +21,7 @@ You can see the live version of the website here: [Visit Portfolio](https://msve
 
 ## Screenshots
 
-![Homepage](/assets/img/homepage.png)
+![Homepage](/assets/img/about.png)
 *Homepage of the portfolio showcasing the introduction section.*
 
 ![Eduction](/assets/img/education.png)
