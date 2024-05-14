@@ -159,9 +159,32 @@ img{
   top: 2rem;
   background-color: #fbbc14;
 }
-.nav__logo{
-  color: var(--second-color);
+.nav__logo {
+  font-size: 1.0em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  animation: colorChange 2s infinite;
 }
+
+.nav__logo .location-icon {
+  margin-right: 0.5em;
+}
+
+@keyframes colorChange {
+  0% {
+      color: #fbbc14; /* Red */
+  }
+  50% {
+      color: var(--first-color) /* Blue */
+  }
+  100% {
+      color: #fbbc14; /* Red */
+  }
+}
+
 .nav__toggle{
   color: var(--second-color);
   font-size: 1.5rem;
@@ -186,16 +209,15 @@ img{
 
 .home {
   display: flex;
-  flex-direction: row; /* Ensure items are laid out in a row */
-  align-items: center; /* Vertically centers the items */
-  justify-content: space-around; /* Distributes space around items */
-  flex-wrap: wrap; /* Allows items to wrap */
-  margin-top: -600px; /* Ensures no top margin is affecting the layout */
-  padding-top: 0; /* Ensures no top padding is affecting the layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 80vh; /* Take full viewport height */
+  padding: 0 20px; /* Add padding to avoid content touching the edges */
 }
 
 .home__data {
-  align-self: center;
+  text-align: center;
 }
 
 .home__title {
@@ -212,6 +234,7 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center; /* Center social icons if column direction */
+  margin-top: 20px; /* Add some space between the data and social icons */
 }
 
 .home__social-icon {
@@ -234,6 +257,22 @@ img{
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: auto; /* Let content determine height */
+    padding-top: 20px; /* Add some padding on top for smaller screens */
+  }
+
+  .home__social {
+    flex-direction: row;
+    justify-content: center; /* Centers social icons horizontally on smaller screens */
+  }
+
+  .home__social-icon {
+    margin: 0 10px; /* Add horizontal margin between icons */
+  }
 }
 
 @media (max-width: 768px) {
@@ -480,6 +519,8 @@ img{
 .experience {
   font-family: 'Arial', sans-serif; /* Use a font similar to the one in the image */
   color: #333; /* Standard text color, adjust as needed */
+  align-items: center; /* Center items vertically */
+  justify-content: center;
 }
 
 .experience__container {
@@ -943,12 +984,7 @@ margin-top: 15px; /* Space above the tools section */
     color: var(--second-color);
   }
 
-  .home{
-    height: 100vh;
-  }
-  .home__data{
-    align-self: flex-end;
-  }
+  
   
   .home__social {
     display: flex;

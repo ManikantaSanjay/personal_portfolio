@@ -15,6 +15,38 @@
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
         <title>Manikanta Sanjay Veera's Portfolio</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <style>
+            .animated-text {
+                font-size: 2em;
+                font-weight: bold;
+            }
+    
+            .word1 {
+                animation: colorChange1 1s infinite;
+            }
+    
+            .word2 {
+                animation: colorChange2 1s infinite;
+            }
+    
+            @keyframes colorChange1 {
+                0%, 100% {
+                    color: #fbbc14 
+                }
+                50% {
+                    color: #4070F4; 
+                }
+            }
+    
+            @keyframes colorChange2 {
+                0%, 100% {
+                    color: #4070F4;
+                }
+                50% {
+                    color: #fbbc14 
+                }
+            }
+        </style>
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", function() {
                 var typed = new Typed('.typing', {
@@ -37,7 +69,10 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Menu</a>
+                    <a href="#" class="nav__logo">
+                        <i class="fas fa-map-marker-alt location-icon"></i>
+                        San Jose, CA, USA
+                    </a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -83,8 +118,19 @@
                   <div class="about__content">
                     <h2 class="about__subtitle" style="color: #fbbc14;">Greetings Viewers!!!</h2>
                     <p class="about__text">
-                      I'm deeply passionate about technology,  with 3+ years of experience in Machine Learning and Data Science. My journey has been fueled by a strong coding foundation and a profound understanding of algorithms, allowing me to navigate through complex problems with ease. I'm proficient in a variety of programming languages and frameworks, including Python, R, SQL, Java, C++, JavaScript, Rust, and Julia. In the realm of Machine Learning, I've spearheaded projects using TensorFlow, PyTorch, and Scikit-Learn, tackling challenges in Time Series Forecasting, Computer Vision, Neural Networks, Program Synthesis, and Deep Reinforcement Learning for Stock Trading. Beyond my technical pursuits, I'm an avid reader, sports enthusiast, and enjoy engaging in conversations about the latest soccer and cricket games. I believe in adaptability, collaboration, and the relentless perseverence of innovation. I'm always on the lookout for opportunities that drive impact, foster learning, and allow for significant development. Let's explore the future of technology together.
-                    </p>
+                        I am currently an MS Computer Science graduate student @ <div class="animated-text">
+                            <span class="word1">San</span>
+                            <span class="word2">Jose</span>
+                            <span class="word1">State</span>
+                            <span class="word2">University</span>
+                        </div> I am dedicated to leveraging technology for positive impact, striving to improve work, living, and engagement environments.
+
+Most recently, I interned at a Stealth Startup, and my role focussed on <b>RAG models</b>, <b>vector databases</b>, and fine-tuning <b>large language models</b>. With <b>3+ years</b> of <b>AI</b> and <b>Data Science</b> experience, I have built and deployed machine learning models across various industries.
+
+Currently, I serve as an Instructional Student Assistant, supporting students in software engineering, computer systems, and blockchain courses. I've authored technical papers presented at <b>IEEE</b> and <b>Springer</b> conferences, covering topics from healthcare to time series forecasting.
+
+I thrive in dynamic environments, enjoying challenges that require quick thinking and adaptability. Outside of work, I love hiking and playing sports like cricket and soccer. I'm actively seeking opportunities in AI, Data Science and Machine Learning.
+                      </p>
                   </div>
                 </div>
               </section>
@@ -151,7 +197,7 @@
                             <li>Led comparative analysis of 7B-13B large language models (LLMs) for low-latency video & audio persona interactions.</li>
                             <li>Setup LLM evaluation and fine-tuning pipeline, abstracting API interactions across platforms (Replicate, OpenAI).</li>
                         </ul>
-                        <div class="experience__tools">Tools: Python, Haystack, Qdrant, OpenAI, Flask</div>
+                        
                     </div>
                 </div>
 
@@ -182,8 +228,7 @@
                                     <li>Introduced heuristic algorithm-based action masking to tackle scalability issues across large action spaces (560K).</li>
                                     <li>Performed quantization (float32 to float16) on TensorRT-based models, increasing CPU/GPU utilization (150%/90%).</li>
                                         </ul>
-                                    <div class="experience__tools">Tools: Python, C++, TensorFlow, Keras, NetworkX, TensorRT, CUDA, Matplotlib, Plotly</div>
-                                </div>
+                                    </div>
                             </div>
                             <div class="timeline__item">
                                 <div class="timeline__content">
@@ -196,7 +241,7 @@
                                     <ul class="experience__description">
                                         <li>Providing constructive feedback on assignments and full-stack projects for 25+ students, utilizing Agile methodologies, Git, Java, Jenkins, Selenium, Flask; resolve 10+ weekly student inquiries. </li>
                                         </ul>
-                                    <div class="experience__tools">Tools: Flask, Java, GitHub CodeSpaces, Canvas</div>
+                                
                 
                                 </div>
                             </div>
@@ -214,7 +259,7 @@
                                     <li>Supporting curriculum for 35+ students, emphasizing CPU architecture, memory management,
                                         software-hardware integration through hands-on C++ and assembly language exercises.</li>
                                     </ul>
-                                    <div class="experience__tools">Tools: C++, C, ARM, x86 architecture </div>
+                                   
                             
                                 </div>
                             </div>
@@ -231,8 +276,7 @@
                                     <li>Mentoring 30+ students in blockchain and cryptocurrencies, focusing on the development of smart contracts and decentralized applications (DApps) using Solidity and Rust.</li>
                                     <li>Graded numerous assignments across technologies, including Solidity, Rust, and JavaScript, evaluating code quality, problem-solving techniques, and the practical application of blockchain concepts.</li>
                                 </ul>
-                                    <div class="experience__tools">Tools: Solidity, Rust, JavaScript, Ethereum</div>
-                            
+                                    
                                 </div>
                             </div>
                         </div>
@@ -264,7 +308,7 @@
                             <li>Executed prompt engineering with GPT-4 to refine user queries, resulting in tailored content optimization suggestions. </li>
                             <li>Deployed app on AWS EC2 P3 with Elastic Load Balancing; guaranteed stable performance during peak traffic. </li>          
                         </ul>
-                        <div class="experience__tools">Tools: Python, React, AWS, OpenAI, GPT-4, MongoDB</div>
+                        
                     </div>
                 </div>
 
@@ -296,7 +340,7 @@
                                         <li>Employed MLflow for A/B testing and experiment monitoring, utilized Optuna for hyperparameter tuning of PyTorch models, enabling seamless performance tracking across 15+ versions.</li>
                                         <li>Enhanced ml infrastructure with statistical modeling techniques and hypothesis testing in SAS; identified cost-saving opportunities, resulting in 12% reduction in operational expenses, equivalent to $2.5M annually.</li>
                                     </ul>
-                                    <div class="experience__tools">Tools: Python, TensorFlow, PyTorch, Azure, AWS, CUDA, SQL</div>
+                                    
                 
                                 </div>
                             </div>
@@ -314,8 +358,7 @@
                                     <li>Utilized Bayesian probabilistic modeling to develop predictive churn models, accurately identifying at-risk customers; resulted in 25% reduction in attrition and revenue increase of $500,000. </li>
                                     <li>Streamlined ingestion of data from 10+ disparate data sources (in CSV, XML, JSON formats) into GCP by transforming data using SQL and R and automated BigQuery schema provisioning with Terraform. </li>
                                     </ul>
-                                    <div class="experience__tools">Tools: Python, R, Google BigQuery, Terraform, MySQL, GCP, JavaScript, REST APIs, Docker, Kubernetes</div>
-                            
+                                    
                                 </div>
                             </div>
                         </div>
@@ -346,8 +389,7 @@
                             <li>Conceptualized and implemented custom ETL process utilizing PL/SQL in Databricks that processed 100M  transaction records per day, resulting in storage of 2+ petabytes of data.</li>
                             <li> Leveraged Docker to containerize ML deployment, cutting environment setup time from 3 hours to 30 minutes. </li>
                             </ul>
-                        <div class="experience__tools">Tools: Python, TensorFlow, AWS Sagemaker, PyTorch, Apache Spark, Docker, Kubernetes </div>
-                    </div>
+                       </div>
                 </div>
 
                 <div class="experience__container bd-grid">
@@ -372,7 +414,7 @@
                             <li>Worked on using Swin Transformers, a Vision Transformer architecture, to denoise cardiac ultrasound images. </li>
                             </ul>
                         
-                        <div class="experience__tools">Tools: Python, PyTorch, Transformers, Computer Vision </div>
+                        
                     </div>
                 </div>
 
@@ -887,8 +929,8 @@
                 
             </div>  
             <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=100006686528463" class="footer__icon"><i class='bx bxl-facebook' ></i>
-                
+                <a href="https://www.kaggle.com/manikantasanjayv" class="footer__icon">
+                    <i class="fab fa-kaggle"></i>
                 </a>
                 <a href="https://www.instagram.com/manikantasanjaykumar/?hl=en" class="footer__icon"><i class='bx bxl-instagram' ></i>
                 
