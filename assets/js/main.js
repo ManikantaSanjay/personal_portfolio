@@ -110,7 +110,7 @@ const publications = [
     },
     {
         id: 4,
-        title: " Mental Health At Work Prediction Using Neural Networks",
+        title: " Mental Health At Work Prediction",
         subtitle: "Evaluates various neural network techniques, including ANN and CNN, to predict workplace-related mental health issues, highlighting the effectiveness of these models to enhance overall health outcomes.",
         imageUrl: "assets/img/mental_health.png",
         link: "https://ieeexplore.ieee.org/abstract/document/9785283"
