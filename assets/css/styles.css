@@ -8,8 +8,8 @@
 
 /*===== Colores =====*/
 :root{
-  --first-color: #4070F4;
-  --second-color: #0E2431;
+  --sjsu-dark-blue: #0055A2;
+  --sjsu-yellow: #F2A900;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -56,7 +56,7 @@ body{
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  color: var(--sjsu-dark-blue);
 }
 h1,h2,p{
   margin: 0;
@@ -79,7 +79,7 @@ img{
 .section-title{
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--sjsu-dark-blue);
   
   margin-bottom: var(--mb-4);
   text-align: center;
@@ -93,7 +93,7 @@ img{
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--sjsu-dark-blue);
 }
 .section{
   padding-top: 3rem;
@@ -136,7 +136,7 @@ img{
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--first-color);
+    background-color: var(--sjsu-dark-blue);
     transition: .5s;
   }
 }
@@ -157,7 +157,7 @@ img{
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: #fbbc14;
+  background-color: var(--sjsu-yellow);
 }
 .nav__logo {
   font-size: 1.0em;
@@ -167,6 +167,7 @@ img{
   text-decoration: none;
   color: #333;
   animation: colorChange 2s infinite;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .nav__logo .location-icon {
@@ -175,18 +176,18 @@ img{
 
 @keyframes colorChange {
   0% {
-      color: #fbbc14; /* Red */
+      color: var(--sjsu-yellow); /* Red */
   }
   50% {
-      color: var(--first-color) /* Blue */
+      color: var(--sjsu-dark-blue) /* Blue */
   }
   100% {
-      color: #fbbc14; /* Red */
+      color: var(--sjsu-yellow); /* Red */
   }
 }
 
 .nav__toggle{
-  color: var(--second-color);
+  color: var(--sjsu-dark-blue);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -199,7 +200,7 @@ img{
   height: 0.18rem;
   left: 0;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--sjsu-dark-blue);
 }
 
 /*=== Show menu ===*/
@@ -212,8 +213,8 @@ img{
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
-  height: 80vh; /* Take full viewport height */
-  padding: 0 20px; /* Add padding to avoid content touching the edges */
+  height: 110vh; /* Take full viewport height */
+  padding: 40px 20px; /* Add padding to avoid content touching the edges */
 }
 
 .home__data {
@@ -223,11 +224,12 @@ img{
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
 }
 
 .home__title-color {
-  color: var(--first-color);
+  color: var(--sjsu-dark-blue);
+  
 }
 
 .home__social {
@@ -241,12 +243,144 @@ img{
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--first-color);
+  color: var(--sjsu-dark-blue);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .home__social-icon:hover {
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
+  transform: translateY(-4px); /* Moves the icon up by 5 pixels */
 }
+
+
+/* Base styles */
+.quote-container {
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.quote__title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.quote__subtitle {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.home__quote {
+  background-color: var(--sjsu-dark-blue);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  max-width: 800px;
+}
+
+.rating__score {
+  font-weight: bold;
+  color: var(--sjsu-yellow);
+  text-align: right;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.quote__text {
+  font-size: 18px;
+  line-height: 1.6;
+  position: relative;
+  padding: 20px 80px 20px 60px;
+  margin-top: 20px;
+}
+
+.quote__text::before, .quote__text::after {
+  font-size: 80px;
+  color: var(--sjsu-yellow);
+  position: absolute;
+  line-height: 0.6;
+}
+
+.quote__text::before {
+  content: '“';
+  top: 10px;
+  left: 10px;
+}
+
+.quote__text::after {
+  content: '”';
+  bottom: -10px;
+  right: 50px;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  .quote__title {
+    font-size: 24px; /* Smaller font size for smaller screens */
+  }
+
+  .quote__subtitle {
+    font-size: 13px;
+  }
+
+  .home__quote {
+    padding: 15px;
+  }
+
+  
+
+  .quote__text {
+    font-size: 16px;
+    padding: 15px 60px 15px 40px;
+  }
+
+  .quote__text::before, .quote__text::after {
+    font-size: 60px;
+  }
+}
+
+/* Media Queries for Smartphones */
+@media (max-width: 480px) {
+  .quote-container {
+    flex-direction: column; /* Stack the elements vertically */
+    padding: 10px 20px;
+  }
+
+  .quote__title {
+    font-size: 20px;
+    margin-right: 0; /* Remove margin for stacked layout */
+    margin-bottom: 10px; /* Add space between title and subtitle */
+  }
+
+  .quote__subtitle {
+    font-size: 12px;
+  }
+
+  .home__quote {
+    padding: 10px;
+  }
+
+  
+
+  .quote__text {
+    font-size: 14px;
+    padding: 10px 40px 10px 30px;
+  }
+
+  .quote__text::before, .quote__text::after {
+    font-size: 40px;
+  }
+}
+
+
 
 .typing {
   font-size: 20px;
@@ -298,9 +432,12 @@ img{
 /* ===== ABOUT =====*/
 /*===== ABOUT =====*/
 /*===== ABOUT SECTION STYLING =====*/
+/*===== ABOUT SECTION STYLING =====*/
 .about {
-  padding: 50px 0;
+  padding: 50px 20px; /* Added padding to the sides */
   background-color: #f8f9fa; /* Optional: background color for the section */
+  max-width: 1200px; /* Limits the section width */
+  margin: 0 auto; /* Centers the section */
 }
 
 .about__container {
@@ -309,12 +446,10 @@ img{
   align-items: center;
   justify-content: space-between;
   gap: 20px; /* Ensures space between columns */
-  margin: 0 auto;
-  max-width: 1200px; /* Adjusted width for better control */
 }
 
 .about__img {
-  flex-basis: 40%; /* Controls the initial size of the image container */
+  flex: 1 1 40%; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
   max-width: 500px;
 }
 
@@ -322,22 +457,65 @@ img{
   width: 100%;
   height: auto;
   border-radius: 10px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to the image */
 }
 
 .about__content {
-  flex-basis: 60%; /* Controls the initial size of the text container */
+  flex: 1 1 55%; /* Flex-grow, flex-shrink, and flex-basis for responsiveness */
   max-width: 700px;
 }
 
 .about__text {
   text-align: justify;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
+
+.about__metrics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.metric {
+  text-align: center;
+  font-size: 24px;
+  color: #333; /* Adjust the color to fit your website's theme */
+}
+
+@keyframes colorSwitch {
+  0%, 100% {
+    color: var(--sjsu-dark-blue); /* Start and end color */
+  }
+  50% {
+    color: var(--sjsu-yellow); /* Color at the halfway point */
+  }
+}
+
+
+
+
+.metric__number {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  animation: colorSwitch 2s infinite;
+  /* This is the yellow color from your subtitle */
+}
+
+.metric__label {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--sjsu-dark-blue); /* Lighter grey text for the metric labels */
+}
+
 
 /* Responsive Design for smaller devices */
 @media (max-width: 1024px) {
   .about__container {
     flex-direction: column;
+    align-items: center;
   }
 
   .about__img, .about__content {
@@ -347,7 +525,7 @@ img{
   }
 }
 
-
+/* ======== EDUCATION ======= */
 /* ======== EDUCATION ======= */
 .content {
   max-height: 0;
@@ -357,12 +535,15 @@ img{
 
 .timeline-date {
   margin-bottom: 20px; /* Adjust this to the amount of space you want */
+  font-weight: bold;
+  color: var(--sjsu-yellow);
 }
 
 
 .timeline-title {
   background: #f9f9f9;
-  color: var(--second-color); /* Adjusted color to match other sections */
+  color: var(--sjsu-dark-blue); /* Adjusted color to match other sections */
+  font-weight: bold;
   padding: 10px;
   width: 80%;
   margin-bottom: 20px;
@@ -375,10 +556,11 @@ img{
 
 
 .timeline-title:hover {
-  background: var(--first-color); /* Adjusted color to match other sections */
+  background: var(--sjsu-dark-blue); /* Adjusted color to match other sections */
    /* Adjusted color to match other sections */
-  color: white;
+  color: var(--sjsu-yellow);
 }
+
 
 
 
@@ -408,21 +590,6 @@ img{
 
 
 
-/* For smaller screens */
-@media only screen and (max-width: 600px) {
-  .timeline {
-    width: 80%; /* Make it full-width on smaller screens */
-  }
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -441,12 +608,12 @@ img{
 }
 
 .skills__name {
-  color: black; /* This sets the text color to white */
+  color: var(--sjsu-dark-blue); /* This sets the text color to white */
 }
 
 /* Rest of the styles remain the same */
 .skills__subtitle {
-  color: black;
+  color: var(--sjsu-dark-blue);
   text-align: center; /* Centers the text horizontally within its containing element */
   padding-bottom: 5px; /* Provides space between the text and the border */
   border-bottom: 2px solid white; /* Creates a white bottom border */
@@ -497,13 +664,13 @@ img{
 }
 
 .skills__container:hover {
-  background-color: #4070F4; /* Replace with the shade of blue you want */
+  background-color: var(--sjsu-dark-blue); /* Replace with the shade of blue you want */
   transition: background-color 0.3s; /* Smooth transition for the color change */
   color: #FFFFFF; 
 }
 
 .skills__container:hover .skills__subtitle {
-  color: #FFFFFF; /* Changes subtitle text color to white when the container is hovered */
+  color: var(--sjsu-yellow); /* Changes subtitle text color to white when the container is hovered */
   transition: color 0.3s; /* Smooth transition for text color */
 }
 
@@ -518,7 +685,7 @@ img{
 /* ================EXPERIENCE============ */
 .experience {
   font-family: 'Arial', sans-serif; /* Use a font similar to the one in the image */
-  color: #333; /* Standard text color, adjust as needed */
+  color: white; /* Standard text color, adjust as needed */
   align-items: center; /* Center items vertically */
   justify-content: center;
 }
@@ -530,7 +697,7 @@ img{
 }
 
 .experience__item {
-  background-color: #f8f8f8; /* Light grey background, similar to the image */
+  background-color: var(--sjsu-dark-blue); /* Light grey background, similar to the image */
   border-radius: 8px; /* Rounded corners */
   padding: 20px; /* Spacing inside the item */
   margin-bottom: 10px; /* Space between experience items */
@@ -567,7 +734,7 @@ color: #000; / Black or a dark color for the position */
 
 .experience__company {
 font-size: 16px;
-color: #555; /* Slightly lighter than the position color */
+color: white; /* Slightly lighter than the position color */
 }
 
 .experience__location {
@@ -579,7 +746,7 @@ float: right;
 justify-self: end;
 padding-left: 50px;
 font-size: 14px;
-color: #666; /* Even lighter for the date /
+color: white; /* Even lighter for the date /
 margin-bottom: 15px; / Space before the description */
 }
 
@@ -598,47 +765,49 @@ margin-bottom: 10px; / Spacing between list items */
 text-align:justify;
 }
 
-.experience__tools {
-font-style: italic;
-color: #333;
-font-size: 14px;
-margin-top: 15px; /* Space above the tools section */
+.separator-line {
+  border-bottom: 2px solid white; /* The line is black and 2px thick */
+  margin: 20px 0; /* Space above and below the line */
 }
 
 /* Hover effect for the entire experience item */
 .experience__item:hover {
-  background-color: var(--first-color); /* Royal blue background on hover */
+  background-color: var(--sjsu-dark-blue); /* Royal blue background on hover */
    /* White text on hover */
 }
 
 /* Ensure that the position, company, year, and tools also turn white on hover */
 .experience__item:hover .experience__position {
   font-size: calc(18px * 1.2); /* 20% larger than 18px */
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
   font-weight: bold;
 }
 
+
+
+
+
 .experience__item:hover .experience__company{
   font-size: calc(16px * 1.2); /* 20% larger than 16px */
-  color: white;
+  color: var(--sjsu-yellow);
   font-weight: bold;
 }
 
 .experience__item:hover .experience__location {
   font-size: calc(16px * 1.2); /* 20% larger than 16px */
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
   font-weight: bold;
 }
 
 .experience__item:hover .experience__year {
   font-size: calc(14px * 1.2); /* 20% larger than 14px */
-  color: white;
+  color: var(--sjsu-yellow);
   font-weight: bold;
 }
 
 .experience__item:hover .experience__tools {
   font-size: calc(14px * 1.2); /* Assuming tools have the same initial font-size as year */
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
   font-weight: bold;
 }
 
@@ -648,15 +817,21 @@ margin-top: 15px; /* Space above the tools section */
 }
 
 .experience__timeline:hover .experience__company,
-.experience__timeline:hover .experience__year {
-  color: var(--first-color
-  );
+.experience__timeline:hover .experience__year
+{ /* The line is black and 2px thick */
+  color: white;
+}
+.experience__timeline:hover .separator-line {
+  border-bottom: 2px solid white;
 }
 
 /* Make description text bold on hover */
 .experience__timeline:hover .experience__description li {
-  color: black;
+  color: white;
 }
+
+
+
 
 
 .timeline__item {
@@ -668,7 +843,7 @@ margin-top: 15px; /* Space above the tools section */
 
 .timeline__content {
   position: relative;
-  background: white;
+  background: var(--sjsu-yellow);
   padding: 20px;
   border-radius: 5px;
   z-index: 1; /* Ensures the content is above the pseudo-element line */
@@ -681,7 +856,7 @@ margin-top: 15px; /* Space above the tools section */
   top: 10px; /* Adjusted to align with the center of the dot */
   height: 10px;
   width: 10px;
-  background: black;
+  background: var(--sjsu-yellow);
   border: 2px solid white;
   border-radius: 50%;
   z-index: 2; /* Ensures the dot is above the line */
@@ -694,7 +869,7 @@ margin-top: 15px; /* Space above the tools section */
   top: 45px; /* Starts the line at the bottom of the dot */
   height: calc(100% + 20px); /* Height to reach up to the next dot */
   width: 2px; /* Width of the line */
-  background-color: #ccc; /* Color of the line */
+  background-color: white; /* Color of the line */
   z-index: 0; /* Ensures the line is behind the content and dot */
 }
 
@@ -799,7 +974,7 @@ margin-top: 15px; /* Space above the tools section */
 
 .show-description .description-bar {
   display: block;
-  background-color: #4070F4; /* This will be the background color after activation */
+  background-color: #0055A2; /* This will be the background color after activation */
   color: white;
   /* ... other styles ... */
 }
@@ -811,7 +986,7 @@ margin-top: 15px; /* Space above the tools section */
   font-weight: var(--font-semi);
   padding: 1rem;
   border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
+  border: 1.5px solid var(--sjsu-dark-blue);
   outline: none;
   margin-bottom: var(--mb-4);
 }
@@ -827,7 +1002,7 @@ margin-top: 15px; /* Space above the tools section */
 
 /*========= PUBLICATIONS========*/
 
-.timeline__content {
+.timeline__content1 {
   margin-bottom: 5px;
 }
 
@@ -841,13 +1016,17 @@ margin-top: 15px; /* Space above the tools section */
   margin-right: auto; /* Center align the date */
 }
 
+.publications {
+  margin-bottom: 50px; /* Adjust the size as needed */
+}
+
 /* General styles */
 .publication__entry {
   display: flex;
   align-items: center;
   background-color: #f8f8f8;
   padding: 10px;
-  border-left: 3px solid var(--first-color);
+  border-left: 3px solid var(--sjsu-dark-blue);
   margin-bottom: 15px; /* Space between entries */
   width: 90%;
   margin-left: auto; /* Automatically adjust left margin */
@@ -862,7 +1041,7 @@ margin-top: 15px; /* Space above the tools section */
 /* Hover and Focus styles */
 .publication__entry:hover, .publication__entry:focus {
   transform: scale(1.05); /* Slightly larger scale on hover/focus */
-  background-color: var(--first-color); /* Lighter background on hover/focus */
+  background-color: var(--sjsu-dark-blue); /* Lighter background on hover/focus */
   font-weight: bold;
   cursor: pointer; /* Changes the cursor to a pointer to indicate clickable */
   outline: none; /* Removes the outline to use only our custom styles */
@@ -873,7 +1052,7 @@ margin-top: 15px; /* Space above the tools section */
 }
 
 .publication__link {
-  color:black;
+  color:var(--sjsu-dark-blue);
 }
 
 .publication__entry:hover .publication__title, 
@@ -882,7 +1061,7 @@ margin-top: 15px; /* Space above the tools section */
 .publication__entry:focus .publication__details,
 .publication__entry:hover .publication__link, 
 .publication__entry:focus .publication__link {
-  color: #fbbc14; /* Change text color on hover/focus */
+  color: var(--sjsu-yellow); /* Change text color on hover/focus */
 }
 
 .publication__link:hover {
@@ -895,13 +1074,136 @@ margin-top: 15px; /* Space above the tools section */
 }
 
 
+.publication__link {
+  position: relative;
+  display: inline-block;
+}
+
+.preview {
+  display: none;
+  position: absolute;
+  margin-top: 5px;
+  top: 100%;
+  right: 0; /* Adjusted to move slightly right */
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 100;
+  transform: translateX(-20%); /* Adjust horizontally to align as desired */
+}
+
+.publication__entry:hover .preview {
+  display: block;
+}
+
+.preview__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.preview__details {
+  padding: 5px;
+  
+}
+
+.preview__title {
+  font-size: 0.75em;
+  font-weight: bold;
+  position: relative; /* Confirms that positioning is relative */
+  text-align: center;
+  display: block; /* Ensures that the container spans the full width */
+}
+
+.preview__subtitle {
+  font-size: 0.5em; /* Adjusted for visibility */
+  position: relative;
+  display: inline-flex; /* This will help align items inline and center them */
+  align-items: justify;
+}
+
+.preview__button {
+  position: absolute;
+  bottom: 10px;  /* Position the button 10 pixels from the bottom */
+  right: 10px;   /* Position the button 10 pixels from the right */
+  font-size: 0.75em;  /* Adjust the font size as needed */
+  padding: 8px 12px;  /* Adjust padding to size the button appropriately */
+  background-color: var(--sjsu-dark-blue); /* Ensure this color variable is defined */
+  color: white;
+  border: none;
+  border-radius: 20px;  /* Rounded corners for the button */
+  cursor: pointer;
+  display: none; /* Button is initially hidden, shown on a specific event */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
+}
+
+.preview__image-container:hover  {
+  display: block; /* Show the button when the container is hovered */
+}
+
+.preview__button:hover{
+  color:var(--sjsu-yellow);
+  font-weight: bold;
+}
 
 
+.copy-icon {
+  position: absolute;
+  top: 0; /* Aligns the icon to the top of the container */
+  right: -5px; /* Aligns the icon to the right of the container */
+  cursor: pointer;
+  color: var(--sjsu-yellow);
+  font-size: 1.5em;
+  line-height: normal; /* Ensures the icon aligns vertically centered if needed */
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: -30px;
+  left: 90%;
+  font-size: 0.75em;
+  transform: translateX(-50%);
+  display: none;
+  background-color: var(--sjsu-dark-blue);
+  color: white;
+  padding: 5px 5px;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.copy-icon:hover + .tooltip-text {
+  display: block;
+}
+
+
+.info-icon {
+  font-size: 1.5em;
+  margin-right: 10px; /* Provides spacing to the right of the icon */
+  color: var(--sjsu-yellow); /* Ensure this color is defined or replace with a hex code */
+}
+
+
+
+
+i.fa-eye {
+  margin-right: 5px; /* Adjust the pixel value to the gap you prefer */
+}
+i.fa-circle-info{
+  margin-right: 5px;
+}
+i.fa-copy{
+  align-items: right;
+  margin-left: 5px;
+}
 /*=======  ========== */
 
 /* ===== FOOTER =====*/
 .footer{
-  background-color: var(--first-color);
+  background-color: var(--sjsu-dark-blue);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
@@ -920,18 +1222,24 @@ margin-top: 15px; /* Space above the tools section */
   color: #fff;
   margin: 0 var(--mb-2);
 }
+
+.footer__icon i.bx-x {
+  font-size: 24px; /* Adjust the size as needed */
+  color: #000; /* Adjust the color as needed */
+}
+
 .footer__icon:hover{
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
 }
 .footer__content{
   font-size: 1.2rem;
-  margin-bottom: var(--mb-2);
+  margin-bottom: var(--mb-1);
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 .footer__content:hover{
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
   transform: scale(1.1);
 }
 
@@ -981,7 +1289,7 @@ margin-top: 15px; /* Space above the tools section */
     display: none;
   }
   .nav__link{
-    color: var(--second-color);
+    color: var(--sjsu-dark-blue);
   }
 
   
@@ -1063,8 +1371,12 @@ margin-top: 15px; /* Space above the tools section */
   transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
+
+
+
+
 .project-card:focus, .project-card:hover {
-  background-color:  #4070F4; /* Light grey background when in focus or hovered */
+  background-color:  #0055A2; /* Light grey background when in focus or hovered */
   outline: none; /* Removes the outline on focus */
 }
 
@@ -1087,34 +1399,51 @@ margin-top: 15px; /* Space above the tools section */
 
 .project-card:focus .project-tags span, .project-card:hover .project-tags span {
   color: white; /* Bright blue background for tags */
-  background-color: #fbbc14; /* White text color for tags */
+  background-color: var(--sjsu-yellow); /* White text color for tags */
   transition: color 0.3s; /* Smooth transition for text color */
 }
 
-.project-title {
-  font-size: 18px; /* Slightly smaller font size for titles */
-  color: black; /* Darker font color for readability */
-  margin: 10px 0 5px 0; /* Reduce space above and increase below the title */
+.project-title a {
+  display: inline-block;
+  position: relative;
+  color: inherit; /* Optional: Ensures the link color matches the text */
 }
 
-.project-title a {
-   /* Color of the link */
-  color: black;
-  text-decoration: none; /* No underline */
+.project-title a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease; /* Animate both width and left properties */
 }
+
+.project-title a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.project-title a::after {
+  background-color: transparent; /* Starts as transparent */
+  transition: width 0.5s ease, left 0.5s ease, background-color 0.5s ease; /* Include background-color in the transition */
+}
+
+.project-title a:hover::after {
+  background-color: currentColor; /* Color appears on hover */
+}
+
+
 
 .project-card:hover .project-title a
 {
-  color:white;
-}
-
-.project-title a:hover
-{
-  background-color: #fbbc14;
+  color:var(--sjsu-yellow);
+  
 }
 
 .project-card:hover .iconify {
-  color: #fbbc14;
+  color: var(--sjsu-yellow);
 }
 
 .project-card img {
@@ -1139,7 +1468,7 @@ margin-top: 15px; /* Space above the tools section */
 
 .project-tags span {
   display: inline-block;
-  background-color: #4070F4; /* Bright blue background for tags */
+  background-color: #0055A2; /* Bright blue background for tags */
   color: #ffffff; /* White text color for tags */
   border-radius: 5px; /* Rounded edges for tags */
   padding: 5px 10px; /* Padding inside tags */
@@ -1156,7 +1485,7 @@ margin-top: 15px; /* Space above the tools section */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black; /* Dark blue background */
+  background-color: var(--sjsu-dark-blue); /* Dark blue background */
   color: #FFFFFF; /* White text */
   padding: 10px 20px;
   margin: 20px auto;
@@ -1173,8 +1502,8 @@ margin-top: 15px; /* Space above the tools section */
 }
 
 .view-full-list-btn:hover {
-  background-color: var(--first-color); /* Slightly lighter blue on hover */
-  color: #fbbc14; /* Light grey text on hover */
+  background-color: var(--sjsu-dark-blue); /* Slightly lighter blue on hover */
+  color: var(--sjsu-yellow); /* Light grey text on hover */
 }
 
 
@@ -1192,3 +1521,134 @@ margin-top: 15px; /* Space above the tools section */
 }
 
 
+
+/*Upward Icon*/
+.upward-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--sjsu-dark-blue);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.upward-icon:hover {
+  color: var(--sjsu-yellow);
+}
+
+
+
+/*Contact form*/
+.message-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* Aligned to the left */
+  background-color: var(--sjsu-dark-blue);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.message-icon:hover {
+  color: var(--sjsu-yellow);
+}
+
+
+.contact-form {
+  position: fixed;
+  bottom: 70px; /* Positioning it above the message icon */
+  left: 20px; /* Aligning with the left side of the message icon */
+  background-color: var(--sjsu-dark-blue);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px; /* Adjust based on your design */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.form-header {
+  font-family: var(--body-font);
+  position: relative;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 30px; /* Provide enough space for the close button */
+}
+
+.form-header button {
+
+  position: absolute;
+  right: -35px; /* Positioning it outside the right edge of the form */
+  top: -35px; /* Positioning it slightly above the form */
+  width: 35px;
+  height: 35px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--sjsu-yellow); /* Red background for visibility */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-header button:hover{
+  color: var(--sjsu-dark-blue);  
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    font-family: var(--body-font);
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff; /* Light background for inputs for better readability */
+    color: var(--sjsu-dark-blue); /* Dark text for better contrast */
+    font-weight: bold;
+}
+
+.contact-form button[type="submit"] {
+    font-family: var(--body-font);
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--sjsu-yellow); /* Using the SJSU yellow for the button */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact-form button[type="submit"]:hover{
+  color: var(--sjsu-dark-blue); 
+} 
+
+
+/*Toast Container*/
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10000;
+  display: none; /* Initially hidden */
+}
+
+#toast-message {
+  background-color: var(--sjsu-dark-blue);
+  color: var(--sjsu-yellow);
+  padding: 10px 20px;
+  border-radius: 5px;
+  
+}

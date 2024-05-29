@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coreui/icons/css/coreui-icons.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
 
 
 
@@ -15,6 +17,7 @@
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
         <title>Manikanta Sanjay Veera's Portfolio</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <style>
             .animated-text {
                 font-size: 2em;
@@ -31,19 +34,19 @@
     
             @keyframes colorChange1 {
                 0%, 100% {
-                    color: #fbbc14 
+                    color: #F2A900;
                 }
                 50% {
-                    color: #4070F4; 
+                    color: #0055A2; 
                 }
             }
     
             @keyframes colorChange2 {
                 0%, 100% {
-                    color: #4070F4;
+                    color: #0055A2;
                 }
                 50% {
-                    color: #fbbc14 
+                    color: #F2A900; 
                 }
             }
         </style>
@@ -62,6 +65,17 @@
 });
 
 
+// Scroll to top function
+window.scrollToTop = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    (function(){
+      emailjs.init({
+        publicKey: "yIuMn1Oj87SU1VMU1",
+      });
+   })();
+
         </script>
     </head>
     <body>
@@ -77,7 +91,7 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
                         <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
@@ -98,7 +112,7 @@
             <section class="home bd-grid" id="home">
                 <div class="home__data">
                     <h2 class="home__title">Hi,<br>I'm <span class="home__title-color">Manikanta Sanjay Veera</span></h2>
-                    <h2><span class="typing" style="color: #4070F4"></span></h2>
+                    <h2><span class="typing" style="color: #0055A2"></span></h2>
                 </div>
 
                 <div class="home__social">
@@ -106,37 +120,71 @@
                     <a href="https://github.com/ManikantaSanjay" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                     <a href="mailto:manikantasanjay1999@gmail.com" class="home__social-icon"><i class='bx bx-mail-send' ></i></i></a>
                 </div>
+                <div class="home__quote">
+                    <div class="quote-container">
+                        <div class="quote__title">Favorite Quote</div>
+                        <div class="quote__subtitle">My favorite motivational quote.</div>
+                    </div>
+                    <blockquote class="quote__text">
+                        You’ve got to start with the customer experience and work back toward the technology—not the other way around.
+                    </blockquote>
+                    <span class="rating__score"> - Steve Jobs</span>
+                </div>
             </section>
 
-            <!--===== ABOUT =====-->
             <section class="about section" id="about">
                 <h2 class="section-title">About</h2>
                 <div class="about__container bd-grid">
-                  <div class="about__img">
-                    <img src="assets/img/personal.jpg" alt="About Manikanta">
-                  </div>
-                  <div class="about__content">
-                    <h2 class="about__subtitle" style="color: #fbbc14;">Greetings Viewers!!!</h2>
-                    <p class="about__text">
-                        I am currently an MS Computer Science graduate student @ <div class="animated-text">
-                            <span class="word1">San</span>
-                            <span class="word2">Jose</span>
-                            <span class="word1">State</span>
-                            <span class="word2">University</span>
-                        </div> I am dedicated to leveraging technology for positive impact, striving to improve work, living, and engagement environments.
-
-Most recently, I interned at a Stealth Startup, and my role focussed on <b>RAG models</b>, <b>vector databases</b>, and fine-tuning <b>large language models</b>. With <b>3+ years</b> of <b>AI</b> and <b>Data Science</b> experience, I have built and deployed machine learning models across various industries.
-
-Currently, I serve as an Instructional Student Assistant, supporting students in software engineering, computer systems, and blockchain courses. I've authored technical papers presented at <b>IEEE</b> and <b>Springer</b> conferences, covering topics from healthcare to time series forecasting.
-
-I thrive in dynamic environments, enjoying challenges that require quick thinking and adaptability. Outside of work, I love hiking and playing sports like cricket and soccer. I'm actively seeking opportunities in AI, Data Science and Machine Learning.
-                      </p>
-                  </div>
+                    <div class="about__img">
+                        <img src="assets/img/personal.jpg" alt="About Manikanta">
+                    </div>
+                    <div class="about__content">
+                        <h2 class="about__subtitle" style="color: #F2A900">Greetings Viewers !!!</h2>
+                        <p class="about__text">
+                            I have completed my Masters in Computer Science @ 
+                            <div class="animated-text">
+                                <span class="word1">San</span>
+                                <span class="word2">Jose</span>
+                                <span class="word1">State</span>
+                                <span class="word2">University</span>
+                            </div> 
+                            with a passion for leveraging technology to make a positive impact on our world. My journey into the tech world began with a simple 'Hello World' program and has evolved into a fulfilling career where I’ve built and deployed machine learning models across various industries.
+                        </p>
+                        <br>
+                        <p class="about__text">
+                            My academic contributions include authoring technical papers presented at IEEE and Springer conferences, covering topics from healthcare to time series forecasting.
+                        </p>
+                        <p class="about__text">
+                            I thrive in dynamic environments where quick thinking and adaptability are key. I’m ready to take on roles such as Data Scientist, Computer Vision Engineer, Machine Learning Engineer, Data Engineer, and Data Analyst. My strong foundation in Reinforcement Learning, Natural Language Processing, Data Science, Artificial Intelligence, and Machine Learning equips me well for these challenges.
+                        </p>
+                        <p class="about__text">
+                            Outside of work, you’ll find me hiking scenic trails or on the cricket and soccer fields. I’m always on the lookout for new opportunities to apply my skills and passion for technology in impactful ways.
+                        </p>
+                        <p class="about__text">
+                            Let’s connect and explore how we can work together to push the boundaries of technology!
+                        </p>
+                        <div class="about__metrics">
+                            <div class="metric">
+                                <span class="metric__number">03+</span>
+                                <span class="metric__label">Years Experience</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__number">40+</span>
+                                <span class="metric__label">Completed Projects</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric__number">04+</span>
+                                <span class="metric__label">Companies Worked</span>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-              </section>
-              
+            </section>              
 
             <!--===== EDUCATION =====-->
+<!--===== EDUCATION =====-->
+<!--===== EDUCATION =====-->
 <section class="education section" id="education">
     <h2 class="section-title">Education</h2>
 
@@ -171,6 +219,11 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
     </div>
 </section>
 
+<!-- Include this script at the bottom of your HTML file -->
+<script src="scripts.js"></script>
+
+
+            
             <!--===== Experience =====-->
             <section class="experience section" id="experience">
                 <h2 class="section-title">Experience</h2>
@@ -194,7 +247,10 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                         
                                     <span class="experience__company">Research Assistant - CS259 - SJSU Interconnect Lab</span>
                                     <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                                    August 2023 - April 2024</span>
+                                    08/2023 - 05/2024</span>
+
+                                    <!-- Separator line -->
+                                    <div class="separator-line"></div>
                                         
                                     
                                     <ul class="experience__description">
@@ -209,7 +265,11 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
 
                                     <span class="experience__company">Instructional Student Assistant - CS161 - Software Project</span>
                                     <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                                        January 2024 - Present</span>
+                                        01/2024 - 05/2024</span>
+                                    
+                                    <!-- Separator line -->
+                                    <div class="separator-line"></div>
+                                    
                                         
                                     
                                     <ul class="experience__description">
@@ -226,7 +286,10 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                         
                                     <span class="experience__company">Instructional Student Assistant - CS47 - Introduction to Compiler Systems</span>
                                     <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                                    January 2024 - Present</span>
+                                    01/2024 - 05/2024</span>
+
+                                    <!-- Separator line -->
+                                    <div class="separator-line"></div>
                                         
                                     
                                     <ul class="experience__description">
@@ -241,9 +304,12 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                                 <div class="timeline__content">
                     
                         
-                                    <span class="experience__company">Instructional Student Assistant - CS168 - Blockchain and CryptoCurrencies</span>
+                                    <span class="experience__company">Instructional Student Assistant - CS168 - Blockchain & Cryptocurrencies</span>
                                     <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                                    January 2024 - Present</span>
+                                    01/2024 - 05/2024</span>
+
+                                    <!-- Separator line -->
+                                    <div class="separator-line"></div>
                                         
                                     
                                     <ul class="experience__description">
@@ -273,7 +339,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                         
                         <span class="experience__company">AI Engineer Intern</span>
                         <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                        September 2023 - December 2023</span>
+                        09/2023 - 12/2023</span>
                             
                         </div>
                         <ul class="experience__description">
@@ -302,10 +368,12 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                             <div class="timeline__item">
                                 <div class="timeline__content">
 
-                                    <span class="experience__company">Programmer Analyst - AI and Data Analytics Team</span>
+                                    <span class="experience__company">Programmer Analyst - AI and Analytics Team</span>
                                     <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                                        July 2021 - July 2022</span>
-                                        
+                                        07/2021 - 07/2022</span>
+                                    
+                                    <!-- Separator line -->
+                                    <div class="separator-line"></div>
                                     
                                     <ul class="experience__description">
                                         <li>Proposed multivariate time series forecasting model using SoTA hybrid VAEs to predict energy consumption for 130,000+ households, yielding <2.5% MAPE, outperforming Temporal Fusion Transformers by 3x. </li>
@@ -323,9 +391,12 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                                 <div class="timeline__content">
                     
                         
-                                    <span class="experience__company">Programmer Analyst Trainee - AI and Data Analytics Team</span>
+                                    <span class="experience__company">Programmer Analyst Trainee - AI and Analytics Team</span>
                                     <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                                        March 2021 - June 2021</span>
+                                        03/2021 - 06/2021</span>
+
+                                    <!-- Separator line -->
+                                    <div class="separator-line"></div>
                                         
                                     
                                     <ul class="experience__description">
@@ -354,7 +425,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                         
                         <span class="experience__company">Data Scientist</span>
                         <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                            February 2020 - January 2021</span>
+                            02/2020 - 01/2021</span>
                             
                         </div>
                         <ul class="experience__description">
@@ -379,7 +450,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                         
                         <span class="experience__company">Machine Learning Intern</span>
                         <span class="experience__year"> <span class="iconify" data-icon="mingcute:time-fill" data-inline="false"></span>
-                            September 2019 - January 2020</span>
+                            09/2019 - 01/2020</span>
                             
                         </div>
                         <ul class="experience__description">
@@ -676,8 +747,10 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
             <img src="assets/img/stocks.png" alt="Time Series Data Analysis on Tech Stocks ">
             <div class="project-content">
                 <h3 class="project-title">
-                    <a href="https://github.com/ManikantaSanjay/Time_Series_Data_Analysis_on_Stocks" target="_blank">Time Series Data Analysis on Tech Stocks</a>
-                    <span class="iconify" data-icon="tabler:external-link" data-inline="false"></span>
+                    <a href="https://github.com/ManikantaSanjay/Time_Series_Data_Analysis_on_Stocks" target="_blank">Time Series Analysis on Stocks</a>
+
+                    
+                    
                 </h3>
                 <h3 class="project-title"></h3>
                 <p>Performed EDA on tech giants' stock data, focusing on closing prices and correlations. Created interactive dashboards with real-time data from Yahoo Finance, stored in MongoDB. Implemented financial indicators, MACD, MFI, and RSI, for trading insights.</p>
@@ -692,7 +765,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
             <div class="project-content">
                 <h3 class="project-title">
                     <a href="https://github.com/ManikantaSanjay/indian_number_plate_character_recognition" target="_blank">Number Plate Recognition</a>
-                    <span class="iconify" data-icon="tabler:external-link" data-inline="false"></span>
+                    
                 </h3>
                 <h3 class="project-title"></h3>
                 <p>A collaborative project associated with Python Application Programming 17CS664 at JSSATE Bengaluru that utilizes image processing and deep learning to detect and recognize vehicle license plates from images. The system offers a interface to allow users to upload vehicle images and view real-time results.
@@ -708,7 +781,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
             <div class="project-content">
                 <h3 class="project-title">
                     <a href="https://devpost.com/software/weheal" target="_blank">WeHeal</a>
-                    <span class="iconify" data-icon="tabler:external-link" data-inline="false"></span>
+                    
                 </h3>
                 <p>A project built during Stanford Treehacks 2024. RAG-based chatbot powered by Langchain to assist mental health therapists by summarizing patient case files and offer personalized suggestions based on past and ongoing interactions.</p>
                 <div class="project-tags">
@@ -724,7 +797,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 <div class="project-content">
                     <h3 class="project-title">
                         <a href="https://github.com/AshishAgarwal2101/cs-286nlp-project" target="_blank">Language Proficiency Checker</a>
-                        <span class="iconify" data-icon="tabler:external-link" data-inline="false"></span>
+                        
                     </h3>
                     <h3 class="project-title"></h3>
                     <p>A project associated with CS286 - Advanced Topics in Natural Language Proficiency Checker at SJSU for grading essays using regression analysis on user-input text. It utilizes fine-tuned LLMs like ROBERTa and DEBERTa v3-small, along with LSTMs, assessing language parameters like cohesion and grammar. Results are displayed via a React-based UI.</p>
@@ -739,7 +812,7 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 <div class="project-content">
                     <h3 class="project-title">
                         <a href="https://drive.google.com/file/d/1CA0DWb6Rk0NKYJ-JETezUpgRrKFu-a68/view" target="_blank">Concept Drift Detection</a>
-                        <span class="iconify" data-icon="tabler:external-link" data-inline="false"></span>
+                        
                     </h3>
                     <h3 class="project-title"></h3>
                     <p>A project associated with CS 271 - Topics In Machine Learning at SJSU focused on evaluating concept drift in malware classifiers using Android datasets, DREBIN and AndroZoo. Employed Adaptive Random Forest (ARF) and Stochastic Gradient Descent (SGD) classifiers for static malware detection. Compared feature extraction performance on textual attributes.</p>
@@ -753,8 +826,8 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 <img src="assets/img/supplychain.png" alt="">
                 <div class="project-content">
                     <h3 class="project-title">
-                        <a href="https://docs.google.com/document/d/13fWCmCp3PwgtHWCy4qgQe9Z7TJDx8vyHoSRcTZik5CA/edit?usp=sharing&usp=embed_facebook&usp=embed_facebook&usp=embed_facebook" target="_blank">Supply Chain Management with NFTs</a>
-                        <span class="iconify" data-icon="tabler:external-link" data-inline="false"></span>
+                        <a href="https://docs.google.com/document/d/13fWCmCp3PwgtHWCy4qgQe9Z7TJDx8vyHoSRcTZik5CA/edit?usp=sharing&usp=embed_facebook&usp=embed_facebook&usp=embed_facebook" target="_blank">Medicine Supply Chain NFTs</a>
+                        
                     </h3>
                     <h3 class="project-title"></h3>
                     <p>A collaborative project associated with CS 168 - Blockchain and Cryptocurrencies at SJSU on Medicine Supply Chain. Deployed ERC-721 smart contracts on Ethereum and created NFTs for medicines, with metadata hosted on IPFS. Developed a pipeline feature to monitor the flow of products across various stakeholders.</p>
@@ -778,28 +851,28 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
             <h2 class="section-title">Publications</h2>
             <div class="publications__section">
                 <div class="timeline__items">
-                    <div class="timeline__content">
+                    <div class="timeline__content1">
                         <span class="publications__date">May, 2023</span>
-                        <div class="publication__entry">
-                            <span class="publication__title">
-                                Time Series AutoML: Hierarchical Factor Based Forecasting</span>
+                        <div class="publication__entry"  data-id="1">
+                            <span class="publication__title">Time Series AutoML: Hierarchical Factor Based Forecasting</span>
+                            <span class="publication__details">Springer - International Conference on Data Management, Analytics & Innovation
+                            <a href="https://doi.org/10.1007/978-981-99-1414-2_17" class="publication__link">
                                 
-                            <span class="publication__details">Springer - International Conference on Data Management, Analytics & Innovation (ICDMAI) </span>
-                            <a href="https://doi.org/10.1007/978-981-99-1414-2_17" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
-                        
+                            </a></span>
                         </div>
+                        
                     </div>
                 </div>
 
                 <div class="timeline__items">
-                    <div class="timeline__content">
+                    <div class="timeline__content1">
                         <span class="publications__date">July, 2022</span>
 
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="2">
                             <span class="publication__title">Data Scientist Job Change Prediction Using Machine Learning Classification Techniques</span>
                             
-                            <span class="publication__details">Springer - Ubiquitous Intelligent Information Systems (ICUIS) </span>
-                            <a href="https://doi.org/10.1007/978-981-19-2541-2_17" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">Springer - Ubiquitous Intelligent Information Systems
+                            <a href="https://doi.org/10.1007/978-981-19-2541-2_17" class="publication__link"></a></span>
                             
                         </div>
                         <!-- Additional publication__entry blocks as needed for more publications in the same month -->
@@ -807,14 +880,14 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 </div>
 
                 <div class="timeline__items">
-                    <div class="timeline__content">
+                    <div class="timeline__content1">
                         <span class="publications__date">May, 2022</span>
 
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="3">
                             <span class="publication__title">Anxiety Prediction during Stressful Scenarios</span>
                             
-                            <span class="publication__details">IEEE - 2022 6th International Conference on Intelligent Computing and Control Systems (ICICCS) </span>
-                            <a href="https://doi.org/10.1109/ICICCS53718.2022.9788151" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">IEEE - 2022 6th International Conference on Intelligent Computing and Control Systems 
+                            <a href="https://doi.org/10.1109/ICICCS53718.2022.9788151" class="publication__link"></a></span>
                             
                         </div>
                         <!-- Additional publication__entry blocks as needed for more publications in the same month -->
@@ -822,32 +895,32 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 </div>
 
                 <div class="timeline__items">
-                    <div class="timeline__content">
+                    <div class="timeline__content1">
                         <span class="publications__date">March, 2022</span>
 
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="4">
                             <span class="publication__title">
                                 Mental Health At Work Prediction Using Neural Networks</span>
                             
-                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems (ICACCS) </span>
-                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785283" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems 
+                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785283" class="publication__link"></a></span>
                             
                         </div>
                         <!-- Additional publication__entry blocks as needed for more publications in the same month -->
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="5">
                             <span class="publication__title">Comparative Analysis of Skin cancer Prediction</span>
                             
-                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems (ICACCS) </span>
-                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785079" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems
+                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785079" class="publication__link"></a></span>
                             
                         </div>
 
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="6">
                             <span class="publication__title">
                                 Lethargy Detection during work using Keras Deep learning</span>
                             
-                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems (ICACCS) </span>
-                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785330" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">IEEE - 2022 8th International Conference on Advanced Computing and Communication Systems  </span>
+                            <a href="https://doi.org/10.1109/ICACCS54159.2022.9785330" class="publication__link"></a></span>
                             
                         </div>
                         
@@ -856,14 +929,14 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 </div>
 
                 <div class="timeline__items">
-                    <div class="timeline__content">
+                    <div class="timeline__content1">
                         <span class="publications__date">January, 2022</span>
 
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="7">
                             <span class="publication__title">Novel Approach to Classification of Ayurvedic Medicinal Plants</span>
                             
-                            <span class="publication__details">International Journal of Engineering Research & Technology (IJERT) </span>
-                            <a href="https://www.ijert.org/a-novel-approach-to-classification-of-ayurvedic-medicinal-plants-using-neural-networks" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">International Journal of Engineering Research & Technology
+                            <a href="https://www.ijert.org/a-novel-approach-to-classification-of-ayurvedic-medicinal-plants-using-neural-networks" class="publication__link"></a></span>
                             
                         </div>
                         <!-- Additional publication__entry blocks as needed for more publications in the same month -->
@@ -871,14 +944,14 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 </div>
 
                 <div class="timeline__items">
-                    <div class="timeline__content">
+                    <div class="timeline__content1">
                         <span class="publications__date">December, 2021</span>
 
-                        <div class="publication__entry">
+                        <div class="publication__entry" data-id="8">
                             <span class="publication__title">Deep Learning Approach for COVID-19 Detection and Diagnosis using ResNet</span>
                             
-                            <span class="publication__details">International Journal of Engineering Research & Technology (IJERT) </span>
-                            <a href="https://www.ijert.org/a-deep-learning-approach-for-covid-19-detection-and-diagnosis-using-resnet-architecture" class="publication__link"><span class="iconify" data-icon="tabler:external-link" data-inline="false"></span></a>
+                            <span class="publication__details">International Journal of Engineering Research & Technology 
+                            <a href="https://www.ijert.org/a-deep-learning-approach-for-covid-19-detection-and-diagnosis-using-resnet-architecture" class="publication__link"></a></span>
                             
                         </div>
                         <!-- Additional publication__entry blocks as needed for more publications in the same month -->
@@ -888,6 +961,40 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
             </div>
         </section>
 
+
+               
+        <div id="upward-icon" class="upward-icon" onclick="scrollToTop()">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+
+        <!-- Message Button -->
+        <div class="message-icon" onclick="toggleContactForm()">
+            <i class="fa-solid fa-message"></i>
+        </div>
+
+        <!-- Contact Form -->
+        <div id="contact-form" class="contact-form" style="display: none;">
+            <div class="form-header">
+                <span>Contact Me</span>
+                <button onclick="toggleContactForm()">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </div>
+            <form action="javascript:void(0);" onsubmit="sendEmail();">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+
+        <!-- Toast Container -->
+<div id="toast-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 10000; display: none;">
+    <div id="toast-message" style="background-color: #f0f0f0; color: #333; padding: 10px 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        Link copied to clipboard!
+    </div>
+</div>
         
         
 
@@ -909,7 +1016,9 @@ I thrive in dynamic environments, enjoying challenges that require quick thinkin
                 <a href="https://www.instagram.com/manikantasanjaykumar/?hl=en" class="footer__icon"><i class='bx bxl-instagram' ></i>
                 
                 </a>
-                <a href="https://twitter.com/manikantasanjay" class="footer__icon"><i class='bx bxl-twitter' ></i> </a>
+                <a href="https://twitter.com/manikantasanjay" class="footer__icon">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
             </div>
                                  
         </footer>

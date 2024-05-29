@@ -25,305 +25,217 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-document.querySelector('#work1 h5').addEventListener('click', function() {
-  window.location.href = "https://github.com/ManikantaSanjay/indian_number_plate_character_recognition";
-});
-
-    document.querySelector("#work2 h5").addEventListener('click', function()  {
-        location.href = "https://devpost.com/software/weheal";
-    });
-
-    document.querySelector('#work3 h5').addEventListener('click', function() {
-      location.href = "https://github.com/AshishAgarwal2101/cs-286nlp-project";
-    });
-
-    document.querySelector('#work4 h5').addEventListener('click', function() {
-      location.href = "https://github.com/ManikantaSanjay/Medical_Care_Management_System";
-    });
-
-    document.querySelector('#work5 h5').addEventListener('click', function() {
-      location.href = "https://drive.google.com/file/d/1CA0DWb6Rk0NKYJ-JETezUpgRrKFu-a68/view";
-    });
-
-    document.querySelector('#work6 h5').addEventListener('click', function() {
-      location.href = "https://drive.google.com/file/d/1V3MPkaS_W5Dntl6K8w2hoaCWDlsqw99w/view";
-    });
-
-/*===== SCROLL REVEAL ANIMATION =====*/
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 2000,
-    reset: true
-});
-
-/*SCROLL HOME*/
-sr.reveal('.home__title',{}); 
-sr.reveal('.button',{delay: 200}); 
-sr.reveal('.home__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-
-/*SCROLL ABOUT*/
-sr.reveal('.about__img',{}); 
-sr.reveal('.about__subtitle',{delay: 400}); 
-sr.reveal('.about__text',{delay: 400}); 
-
-/*SCROLL SKILLS*/
-sr.reveal('.skills__subtitle',{}); 
-sr.reveal('.skills__text',{}); 
-sr.reveal('.skills__data',{interval: 200}); 
-sr.reveal('.skills__img',{delay: 600});
 
 
 
-function copyToClipboard() {
-    const str = document.getElementById('contactno').innerText;
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
+
+
+
+
+
+
+
+
+
+
+
+function toggleContactForm() {
+  var form = document.getElementById('contact-form');
+  form.style.display = (form.style.display === 'none' ? 'block' : 'none');
 }
 
-// Existing scroll reveal animations...
-
-function copyToClipboard() {
-    const str = document.getElementById('contactno').innerText;
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-}
-
-/*===== TIMELINE EXPAND/COLLAPSE FEATURE =====*/
-var coll = document.getElementsByClassName("timeline-title");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        } 
-    });
-}
-
-var contactno = document.getElementById('contactno');
-var copyBox = contactno.querySelector('.copyBox');
-var phoneText = contactno.querySelector('span');
-
-contactno.addEventListener('mouseenter', function() {
-  // Show the copy box when mouse enters the element
-  copyBox.style.display = 'block';
-});
-
-contactno.addEventListener('mouseleave', function() {
-  // Hide the copy box when mouse leaves the element
-  copyBox.style.display = 'none';
-});
-
-copyBox.addEventListener('click', function() {
-  // Create a new textarea element
-  var textarea = document.createElement('textarea');
-  
-  // Set the value of the textarea to the text you want to copy
-  textarea.value = phoneText.textContent;
-  
-  // Append the textarea to the HTML document
-  document.body.appendChild(textarea);
-  
-  // Select the text
-  textarea.select();
-  
-  // Copy the text
-  document.execCommand('copy');
-  
-  // Remove the textarea
-  document.body.removeChild(textarea);
-  
-  // Provide feedback if desired
-  alert("Copied to clipboard");
-});
-
-function showDetails(id) {
-    var details = document.getElementById(id);
-    if (details.style.display === "none") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
-    }
-}
-
-// Experience dynamic generation
-
-var experienceData = [
-    {
-      "company": "Cognizant",
-      "url": "https://www.cognizant.com/us/en",
-      "duration": "July 2021 - July 2022",
-      "position": "Programmer Analyst - Full Stack Engineering Team",
-      "responsibilities": [
-        "Established high-performance order processing services, using React and NodeJS, ensuring a low latency system for clients; handled over 800+ orders per minute.",
-        "Architected Docker containerized micro-services using Golang for helping customers track real-time orders; resulted in a 30% decrease in average customer support ticket resolution time.",
-        "Orchestrated the deployment of the micro-services on AWS using Kubernetes; enabled the system to handle 5X increase in concurrent user traffic with minimal downtime.",
-      ]
-    },
-    {
-        "company": "Cognizant",
-        "url": "https://www.cognizant.com/us/en",
-        "duration": "March 2021 - July 2021",
-        "position": "Programmer Analyst Trainee - Full Stack Engineering Team",
-        "responsibilities": [
-          "Engineered an internal support tool with customizable dashboards and reports, empowering team leaders to analyze trends, identify areas for improvement; facilitated access to real-time customer support metrics and ticketing data",
-          "Streamlined GraphQL integration with the Python backend; led to 15% improvement in data query efficiency."
-        ]
-      },
-      {
-        "company": "Agent Technologies Pvt. Ltd",
-        "url": "http://www.agenttech.org/",
-        "duration": "February 2020 - October 2020",
-        "position": "Software Developer Intern",
-        "responsibilities": [
-          "Created MATLAB scripts and functions to analyze large datasets collected from sensors of home automation systems.",
-          "Revamped the user experience by developing interactive MATLAB GUIs for customers, resulting in a 20% increase in overall customer satisfaction ratings and a 35% improvement in user engagement."
-        ]
-      },
-    
-  ];
-  
-// Experience dynamic generation
 
 
-window.onload = function() {
-  var experienceContainer = document.querySelector('#experience .container');
+function sendEmail() {
+  var fullName = document.getElementById('fullName').value;
+  var email = document.getElementById('email').value;
+  var message = document.getElementById('message').value;
 
-  experienceData.forEach(function(workExperience,index) {
-    var row = document.createElement('div');
-    row.className = 'row mt-4 mt-md-0';
-
-    var leftCol = document.createElement('div');
-    leftCol.className = 'col-lg-6 col-md-12 icon-box';
-    leftCol.setAttribute('data-aos', 'fade-up');
-    leftCol.setAttribute('data-aos-delay', '100');
-
-    var h4 = document.createElement('h4');
-    h4.style.textAlign = 'left';
-
-    var link = document.createElement('a');
-    link.href = workExperience.url;
-    link.style.color = '#4070F4';
-    link.textContent = workExperience.company;
-
-    h4.appendChild(link);
-    leftCol.appendChild(h4);
-
-    var h5 = document.createElement('h5');
-    h5.style.textAlign = 'left';
-    h5.style.color = 'black';
-    h5.textContent = workExperience.duration;
-    leftCol.appendChild(h5);
-
-    var p = document.createElement('p');
-    p.style.textAlign = 'left';
-    p.style.color = 'black';
-    var em = document.createElement('em');
-    em.textContent = workExperience.position;
-    p.appendChild(em);
-    leftCol.appendChild(p);
-
-    leftCol.addEventListener('click', function() {
-      // first hide all other rightCols
-      var allRightCols = document.querySelectorAll('.rightCol');
-      allRightCols.forEach(function(col) {
-        col.style.display = 'none';
-      });
-
-      // then display the clicked one
-      var rightCol = document.getElementById(`rightCol-${index}`);
-      rightCol.style.display = 'block';
-
-      // move the leftCol to the left
-      this.className = 'col-lg-3';
-    });
-
-    row.appendChild(leftCol);
-
-    var rightCol = document.createElement('div');
-    rightCol.className = 'col-lg-6 col-md-12 icon-box';
-    rightCol.setAttribute('data-aos', 'fade-up');
-    rightCol.setAttribute('data-aos-delay', '100');
-
-    var ul = document.createElement('ul');
-    ul.style.textAlign = 'left';
-    workExperience.responsibilities.forEach(function(responsibility) {
-      var li = document.createElement('li');
-      li.textContent = responsibility;
-      ul.appendChild(li);
-    });
-
-    rightCol.style.display = 'none';
-    rightCol.id = `rightCol-${index}`;
-    rightCol.className = `rightCol col-lg-9`; 
-
-    rightCol.appendChild(ul);
-    row.appendChild(rightCol);
-    
-    experienceContainer.appendChild(row);
-  });
-};
-
-// document.querySelectorAll('.menu-trigger').forEach(item => {
-//   item.addEventListener('click', () => {
-//       // Toggle the visibility of the description bar
-//       const workImg = item.closest('.work__img');
-//       workImg.classList.toggle('show-description');
-//   });
-// });
-document.querySelectorAll('.menu-trigger').forEach(button => {
-  button.addEventListener('click', function() {
-      this.nextElementSibling.style.display = 'block'; // Shows the description bar
-  });
-});
-
-function autoScrollDescriptionBar() {
-  const descriptionBar = document.querySelector('.description-bar');
-  const content = document.querySelector('.scrollable-content');
-
-  let scrollAmount = 0; // Starting scroll position
-  const step = 1; // How much to move each interval (in pixels)
-  const delay = 30; // Delay between each movement (in milliseconds)
-  const resetDelay = 100; // Delay before scrolling resets (in milliseconds)
-
-  function stepScroll() {
-      const maxScrollHeight = content.scrollHeight - descriptionBar.clientHeight;
-
-      if (scrollAmount < maxScrollHeight) {
-          scrollAmount += step;
-          content.style.top = -scrollAmount + 'px';
-      } else {
-          setTimeout(() => {
-              scrollAmount = 0; // Reset scroll amount
-              content.style.top = '0px'; // Reset position
-          }, resetDelay);
-      }
+  if (!fullName.trim()) {
+      alert('Please enter your full name.');
+      return false;
+  }
+  if (!validateEmail(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+  }
+  if (!message.trim() || message.toLowerCase().includes('spam')) {
+      alert('Please enter a valid message. Make sure it is not spam.');
+      return false;
   }
 
-  setInterval(stepScroll, delay);
+  // Assuming you are using EmailJS or a similar service
+  emailjs.send("service_d9km80g", "template_vifr2m4", {
+      to_name: "Manikanta Sanjay",
+      from_name: fullName,
+      message: message,
+      reply_to: email,
+  })
+  .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      toggleContactForm(); // Close the form on success
+      alert('Message sent successfully!');
+  }, function(error) {
+      console.log('FAILED...', error);
+      alert('Failed to send message.');
+  });
 }
 
-autoScrollDescriptionBar(); // Call the function
+function validateEmail(email) {
+  var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+}
+
+const publications = [
+    {
+        id: 1,
+        title: "Time Series AutoML: Hierarchical Factor Based Forecasting",
+        subtitle: "Talks about hybrid forecasting model that combines deep learning and traditional time series methods to predict high-dimensional datasets, managing uncertainty effectively.",
+        imageUrl: "assets/img/time_series.png",
+        link: "https://doi.org/10.1007/978-981-99-1414-2_17"
+    },
+    {
+        id: 2,
+        title: "Data Scientist Job Change Prediction",
+        subtitle: "Explores the use of deep learning methods, logistic regression, random forest, KNN, and SVM, to predict job changes among data science professionals.",
+        imageUrl: "assets/img/data_scientist.png",
+        link: "https://doi.org/10.1007/978-981-19-2541-2_17"
+    },
+    {
+        id: 3,
+        title: "Anxiety Prediction during Stressful Scenarios",
+        subtitle: "Talks about machine learning model to identify levels of anxiety based on individuals' responses to specific mental health questions, aiming to facilitate appropriate psychiatric interventions to prevent severe outcomes.",
+        imageUrl: "assets/img/anxiety_prediction.png",
+        link: "https://doi.org/10.1109/ICICCS53718.2022.9788151"
+    },
+    {
+        id: 4,
+        title: " Mental Health At Work Prediction Using Neural Networks",
+        subtitle: "Evaluates various neural network techniques, including ANN and CNN, to predict workplace-related mental health issues, highlighting the effectiveness of these models to enhance overall health outcomes.",
+        imageUrl: "assets/img/mental_health.png",
+        link: "https://ieeexplore.ieee.org/abstract/document/9785283"
+    },
+    {
+        id: 5,
+        title: "Comparative Analysis of Skin cancer Prediction",
+        subtitle: "Explores deep learning and transfer learning techniques, Naive Bayes, logistic regression, random forests, decision trees, ANNs, and CNNs, to predict skin cancer from UV exposure, for accurate diagnosis.",
+        imageUrl: "assets/img/skin_cancer.png",
+        link: "https://ieeexplore.ieee.org/abstract/document/9785079"
+    },
+    {
+        id: 6,
+        title: "Lethargy Detection during Work",
+        subtitle: "Explores the use of deep learning methods and Keras to detect lethargy in employees in the work-from-home environment, comparing the effectiveness of these techniques to contribute to better workplace well-being.",
+        imageUrl: "assets/img/lethargy.png",
+        link: "https://ieeexplore.ieee.org/abstract/document/9785330"
+    },
+    {
+        id: 7,
+        title: "Novel Approach to Classification of Ayurvedic Medicinal Plants",
+        subtitle: "Describes an automated classification system for medicinal plants in India, utilizing image processing and CNNs to classify plant species from leaf images, supporting medicinal, botanical, and taxonomical research.",
+        imageUrl: "assets/img/ayurveda.png",
+        link: "https://www.ijert.org/a-novel-approach-to-classification-of-ayurvedic-medicinal-plants-using-neural-networks"
+    },
+    {
+        id: 8,
+        title: "Deep Learning Approach for COVID-19 Detection and Diagnosis",
+        subtitle: "Presents Convolutional Neural Network (CNN) model analyzing chest X-rays to detect COVID-19 infections, offering a quicker alternative to the extensive testing processes required during the pandemic.",
+        imageUrl: "assets/img/covid19.png",
+        link: "https://www.ijert.org/a-deep-learning-approach-for-covid-19-detection-and-diagnosis-using-resnet-architecture"
+    },
+
+    // Add more publication objects here
+];
+
+
+
+
+
+
+
+document.querySelectorAll('.publication__entry').forEach(entry => {
+    entry.addEventListener('mouseenter', function() {
+        const pubId = this.getAttribute('data-id');
+        const pubData = publications.find(pub => pub.id.toString() === pubId);
+
+        if (!pubData) return;
+
+        let previewDiv = this.querySelector('.preview');
+        if (!previewDiv) {
+            previewDiv = document.createElement('div');
+            previewDiv.className = 'preview';
+            previewDiv.innerHTML = `
+    <div class="preview__details">
+        <span class="preview__title">
+            ${pubData.title}
+            <i class="fa-solid fa-copy copy-icon"></i>
+            <span class="tooltip-text">Copy link</span>
+        </span>
+        <div class="preview__image-container" style="position: relative;">
+            <img src="${pubData.imageUrl}" alt="Publication Image" class="preview__image">
+            <button class="preview__button" style="display: none;"><i class="fa-solid fa-eye"></i>Open preview</button>
+        </div>
+        <span class="preview__subtitle"><i class="fa-solid fa-circle-info"></i>${pubData.subtitle}</span>
+    </div>
+`;
+            this.appendChild(previewDiv);
+            setupPreview(previewDiv, pubData);
+        }
+    });
+
+    entry.addEventListener('mouseleave', function() {
+        const previewDiv = this.querySelector('.preview');
+        if (previewDiv) {
+            this.removeChild(previewDiv);
+        }
+    });
+});
+
+function setupPreview(previewDiv, pubData) {
+    const imgContainer = previewDiv.querySelector('.preview__image-container');
+    const button = previewDiv.querySelector('.preview__button');
+
+    imgContainer.addEventListener('mouseenter', () => {
+        button.style.display = 'block';
+    });
+    imgContainer.addEventListener('mouseleave', () => {
+        button.style.display = 'none';
+    });
+
+    const copyIcon = previewDiv.querySelector('.fa-copy');
+    if (copyIcon) {
+        copyIcon.addEventListener('click', function(e) {
+            e.stopPropagation();  // Prevent the link from being triggered
+            navigator.clipboard.writeText(pubData.link).then(() => {
+                showToast('Link copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy link:', err);
+                showToast('Failed to copy link', true);
+            });
+        });
+    }
+
+    button.addEventListener('click', () => {
+        window.open(pubData.link, '_blank');
+    });
+}
+
+function showToast(message, error = false) {
+    const toastContainer = document.getElementById('toast-container');
+    const toastMessage = document.getElementById('toast-message');
+    toastMessage.textContent = message;
+    toastMessage.style.backgroundColor = error ? 'red' : '#f0f0f0';
+    toastContainer.style.display = 'block';
+
+    setTimeout(() => {
+        toastContainer.style.display = 'none';
+    }, 3000);
+}
+
+
+
+
+
 
 
 
