@@ -19,23 +19,6 @@ Welcome to the GitHub repository for my personal portfolio website! This site is
 
 You can see the live version of the website here: [Visit Portfolio](https://msveera.netlify.app)
 
-## Screenshots
-
-![Homepage](/assets/img/about.png)
-*Homepage of the portfolio showcasing the introduction section.*
-
-![Eduction](/assets/img/education.png)
-*Education section.*
-
-![Skills](/assets/img/skills.png)
-*Skills section.*
-
-![Projects](/assets/img/projects.png)
-*Projects section.*
-
-![Publications](/assets/img/publications.png)
-*Publications section.*
-
 
 ## Local Setup
 
