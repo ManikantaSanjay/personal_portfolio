@@ -279,7 +279,7 @@ img{
   background-color: var(--sjsu-dark-blue);
   color: white;
   padding: 20px;
-  border-radius: 8px;
+  
   margin: 20px 0;
   max-width: 800px;
 }
@@ -429,15 +429,19 @@ img{
       justify-content: center; /* Centers social icons horizontally on smaller screens */
   }
 }
-/* ===== ABOUT =====*/
-/*===== ABOUT =====*/
-/*===== ABOUT SECTION STYLING =====*/
+
 /*===== ABOUT SECTION STYLING =====*/
 .about {
   padding: 50px 20px; /* Added padding to the sides */
-  background-color: #f8f9fa; /* Optional: background color for the section */
+  background-color: white; /* Optional: background color for the section */
   max-width: 1200px; /* Limits the section width */
   margin: 0 auto; /* Centers the section */
+  box-shadow: 
+  0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
+  0 12px 24px rgba(242, 169, 0, 0.8); /* SJSU Gold, more prominent */
+  background-size: 400% 400%;
+  animation: GradientBackground 15s ease infinite;
+  
 }
 
 .about__container {
@@ -446,6 +450,7 @@ img{
   align-items: center;
   justify-content: space-between;
   gap: 20px; /* Ensures space between columns */
+  
 }
 
 .about__img {
@@ -511,11 +516,39 @@ img{
 }
 
 
+
+/* Media query for smaller screens, e.g., mobile devices */
+@media (max-width: 768px) {
+  .metric__number {
+    font-size: 30px; /* Reduced font size on smaller screens */
+  }
+
+  .metric__label {
+    font-size: 16px; /* Slightly smaller font size for labels on smaller screens */
+  }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+  .metric__number {
+    font-size: 24px; /* Further reduced font size for very small screens */
+  }
+
+  .metric__label {
+    font-size: 14px; /* Further reduction for very small screens */
+  }
+}
+
+
 /* Responsive Design for smaller devices */
 @media (max-width: 1024px) {
+  .about{
+    margin: 20px 10px;
+  }
   .about__container {
     flex-direction: column;
     align-items: center;
+    
   }
 
   .about__img, .about__content {
@@ -534,14 +567,16 @@ img{
 }
 
 .timeline-date {
+  font-size: 1.25em;
   margin-bottom: 20px; /* Adjust this to the amount of space you want */
   font-weight: bold;
   color: var(--sjsu-yellow);
 }
 
 
+
 .timeline-title {
-  background: #f9f9f9;
+  background: white;
   color: var(--sjsu-dark-blue); /* Adjusted color to match other sections */
   font-weight: bold;
   padding: 10px;
@@ -552,6 +587,12 @@ img{
   outline: none;
   font-size: 1.25em;
   transition: 0.4s;
+  box-shadow: 
+  0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
+  0 12px 24px rgba(242, 169, 0, 0.8); /* SJSU Gold, more prominent */
+  background-size: 400% 400%;
+  animation: GradientBackground 15s ease infinite;
+  
 }
 
 
@@ -589,56 +630,50 @@ img{
 
 
 
-
-
-
-
-
-/* ===== SKILLS =====*/
-/* Component-specific styles */
-
-.skills__container {
-  background-color: #f9f9f9; /* Light grey background for the container */
-  margin: 10px auto; /* Center the container with automatic horizontal margins */
-  padding: 10px 0; /* Vertical padding only */
-  border-radius: 8px; /* Rounded corners */
-  display: flex; /* Use flexbox to center children */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-}
-
-.skills__name {
-  color: var(--sjsu-dark-blue); /* This sets the text color to white */
-}
-
-/* Rest of the styles remain the same */
 .skills__subtitle {
   color: var(--sjsu-dark-blue);
-  text-align: center; /* Centers the text horizontally within its containing element */
+  text-align: center; /* Ensures text is centered */
   padding-bottom: 5px; /* Provides space between the text and the border */
-  border-bottom: 2px solid white; /* Creates a white bottom border */
-  display: block; /* Allows the element to take the full width */
-  width: 100%; /* Ensures the element stretches from left to right */
+  border-bottom: 2px solid white; /* Creates a visible bottom border */
+  display: block; /* Ensures the element behaves as a block-level element */
+  width: 100%; /* Makes sure the element spans the full width */
+  margin: auto; /* Centers the element within its container if needed */
   margin-bottom: 10px; 
 }
 
 
+
+
+/* Component-specific styles */
+.skills__container {
+  background-color: white; /* Light grey background for the container */
+  margin: 10px auto; /* Center the container with automatic horizontal margins */
+  margin-bottom: 40px;
+  padding: 10px 0; /* Vertical padding only */
+  
+  display: flex; /* Use flexbox to center children */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  box-shadow:
+    0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
+    0 12px 24px rgba(242, 169, 0, 0.8); /* SJSU Gold, more prominent */
+  background-size: 400% 400%;
+  animation: GradientBackground 15s ease infinite;
+}
+
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); /* 5 items across */
-  gap: 60px; /* This sets the gap between items */
-  padding: 20px 90px; 
+  grid-template-columns: repeat(4, 1fr); /* Adjusted from 8 to 3 columns for better spacing */
+  gap: 20px; /* Reduced gap for better spacing */
+  padding: 20px; /* Uniform padding */
   justify-content: space-around; 
 }
 
 .skill-item {
-  /* Removed max-width to allow grid to handle sizing */
   display: flex;
   flex-direction: column;
   justify-self: center; /* Horizontally center the content of the grid cell */
-  align-self: center; 
-  /* If you want to ensure each item is the same width, you can set a fixed width */
-  width: 100%; /* Each item will try to take up 100% of its grid cell */
+  align-self: center;
 }
 
 .skills__icon {
@@ -649,35 +684,27 @@ img{
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .skills__grid {
-      grid-template-columns: repeat(4, 1fr); /* 3 items across on smaller screens */
-      /* If the total width is less than 5 items + gaps */
-      justify-content: space-around; /* This will distribute space evenly */
+      grid-template-columns: repeat(2, 1fr); /* Adjusted to 2 columns */
+      gap: 15px; /* Reduced gap for smaller screens */
   }
 }
 
-@media screen and (max-width: 480px) {
-  .skills__grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 items across on very small screens */
-      /* If the total width is less than 3 items + gaps */
-      justify-content: space-around; /* This will distribute space evenly */
-  }
-}
+
 
 .skills__container:hover {
-  background-color: var(--sjsu-dark-blue); /* Replace with the shade of blue you want */
-  transition: background-color 0.3s; /* Smooth transition for the color change */
-  color: #FFFFFF; 
+  background-color: var(--sjsu-dark-blue);
+  transition: background-color 0.3s;
+  color: #FFFFFF;
 }
 
 .skills__container:hover .skills__subtitle {
-  color: var(--sjsu-yellow); /* Changes subtitle text color to white when the container is hovered */
-  transition: color 0.3s; /* Smooth transition for text color */
+  color: var(--sjsu-yellow);
+  transition: color 0.3s;
 }
 
 .skills__container:hover .skills__name {
-  color: white; /* Smooth transition for the transform */
+  color: white;
 }
-
 
 
 
@@ -685,7 +712,7 @@ img{
 /* ================EXPERIENCE============ */
 .experience {
   font-family: 'Arial', sans-serif; /* Use a font similar to the one in the image */
-  color: white; /* Standard text color, adjust as needed */
+  color: var(--sjsu-dark-blue); /* Standard text color, adjust as needed */
   align-items: center; /* Center items vertically */
   justify-content: center;
 }
@@ -693,12 +720,31 @@ img{
 .experience__container {
   display: flex;
   flex-direction: column;
-  margin-top: 10px; /* Adjust the margin as needed */
+  margin-top: 10px;
+  margin-bottom: 30px;
+  
+  box-shadow: 
+  0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
+  0 12px 24px rgba(242, 169, 0, 0.8); /* SJSU Gold, more prominent */
+  background-size: 400% 400%;
+  animation: GradientBackground 15s ease infinite;
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .experience__item {
-  background-color: var(--sjsu-dark-blue); /* Light grey background, similar to the image */
-  border-radius: 8px; /* Rounded corners */
+  background-color: white; /* Light grey background, similar to the image */
+  
   padding: 20px; /* Spacing inside the item */
   margin-bottom: 10px; /* Space between experience items */
 }
@@ -718,7 +764,7 @@ img{
   left: 0; /* Align with the left edge of the experience__header */
   right: 0; /* Align with the right edge of the experience__header */
   bottom: -10px; /* Position just below the experience__header */
-  border-bottom: 2px solid white; /* White border for the line */
+  border-bottom: 2px solid var(--sjsu-yellow); /* White border for the line */
   width: 100%; /* Full width of the container */
 }
 
@@ -734,11 +780,12 @@ color: #000; / Black or a dark color for the position */
 
 .experience__company {
 font-size: 16px;
-color: white; /* Slightly lighter than the position color */
+color: var(--sjsu-yellow); /* Slightly lighter than the position color */
 }
 
 .experience__location {
   justify-self: end; /* Aligns the location to the end of the grid area */
+  font-weight: bold;
 }
 
 .experience__year {
@@ -746,7 +793,7 @@ float: right;
 justify-self: end;
 padding-left: 50px;
 font-size: 14px;
-color: white; /* Even lighter for the date /
+color: var(--sjsu-yellow); /* Even lighter for the date /
 margin-bottom: 15px; / Space before the description */
 }
 
@@ -766,7 +813,7 @@ text-align:justify;
 }
 
 .separator-line {
-  border-bottom: 2px solid white; /* The line is black and 2px thick */
+  border-bottom: 2px solid var(--sjsu-yellow); /* The line is black and 2px thick */
   margin: 20px 0; /* Space above and below the line */
 }
 
@@ -839,21 +886,25 @@ text-align:justify;
   margin-bottom: 20px;
   /* This padding-top should be equal or more than the height of the .timeline__content:before to prevent overlap */
   padding-top: 30px;
+  color: white;
 }
 
 .timeline__content {
   position: relative;
-  background: var(--sjsu-yellow);
+  background: var(--sjsu-dark-blue);
+  color: white;
   padding: 20px;
   border-radius: 5px;
   z-index: 1; /* Ensures the content is above the pseudo-element line */
+  border: 2px solid #F2A900;
+  
 }
 
 .timeline__content:before {
   content: '';
   position: absolute;
-  left: -15px;
-  top: 10px; /* Adjusted to align with the center of the dot */
+  left: -17px;
+  top: 25px; /* Adjusted to align with the center of the dot */
   height: 10px;
   width: 10px;
   background: var(--sjsu-yellow);
@@ -866,11 +917,58 @@ text-align:justify;
   content: '';
   position: absolute;
   left: -11px; /* Centers the line with the dot. Adjust as necessary. */
-  top: 45px; /* Starts the line at the bottom of the dot */
+  top: 60px; /* Starts the line at the bottom of the dot */
   height: calc(100% + 20px); /* Height to reach up to the next dot */
   width: 2px; /* Width of the line */
-  background-color: white; /* Color of the line */
+  background-color: var(--sjsu-yellow); /* Color of the line */
   z-index: 0; /* Ensures the line is behind the content and dot */
+}
+
+.timeline__content:hover{
+  background: var(--sjsu-yellow);
+}
+
+/* Media queries for reducing font sizes on smaller screens */
+@media (max-width: 1024px) { /* For tablets and large phones */
+  .experience__position {
+    font-size: 16px;
+  }
+  .experience__company,
+  .experience__location,
+  .experience__year {
+    font-size: 14px;
+  }
+  .experience__description li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) { /* For small tablets and large phones */
+  .experience__position {
+    font-size: 15px;
+  }
+  .experience__company,
+  .experience__location,
+  .experience__year {
+    font-size: 13px;
+  }
+  .experience__description li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) { /* For small phones */
+  .experience__position {
+    font-size: 14px;
+  }
+  .experience__company,
+  .experience__location,
+  .experience__year {
+    font-size: 12px;
+  }
+  .experience__description li {
+    font-size: 11px;
+  }
 }
 
 
@@ -1024,14 +1122,17 @@ text-align:justify;
 .publication__entry {
   display: flex;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: white;
   padding: 10px;
   border-left: 3px solid var(--sjsu-dark-blue);
-  margin-bottom: 15px; /* Space between entries */
+  margin-bottom: 25px; /* Space between entries */
   width: 90%;
   margin-left: auto; /* Automatically adjust left margin */
   margin-right: auto; /* Automatically adjust right margin */
   transition: transform 0.3s ease-in-out, background-color 0.3s ease; /* Smooth transition for transform and background color */
+  box-shadow: 
+  0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
+  0 12px 24px rgba(242, 169, 0, 0.8); /* SJSU Gold, more prominent */
 }
 
 .publication__title, .publication__details {
@@ -1342,7 +1443,7 @@ i.fa-copy{
 }
 
 
-
+/*Projects*/
 
 .projects {
   background-color: #f0f0f0; /* Light grey background */
@@ -1358,17 +1459,22 @@ i.fa-copy{
   align-items: flex-start; /* Align items from the start of the flex line */
   margin: 0 auto; /* Center the container horizontally */
   max-width: 1200px; /* Adjust max width to accommodate three cards */
+  
 }
 
 .project-card {
   width: calc(33.33% - 40px); /* Adjust width to allow three cards per row */
-  background-color: #ffffff;
   margin: 20px; /* Consistent margin for spacing around cards */
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   overflow: hidden;
   padding: 15px;
   transition: background-color 0.3s; /* Smooth transition for background color */
+  background: white;
+  box-shadow: 
+    0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
+    0 12px 24px rgba(242, 169, 0, 0.5); /* SJSU Gold, more prominent */
+  background-size: 400% 400%;
+  animation: GradientBackground 15s ease infinite;
+  
 }
 
 
@@ -1516,7 +1622,7 @@ i.fa-copy{
 @media (max-width: 768px) {
   .project-card {
     width: 100%; /* Full width on smaller screens */
-    margin: 20px 0; /* Adjust margin to only top and bottom */
+    margin: 20px 15px; /* Adjust margin to only top and bottom */
   }
 }
 
