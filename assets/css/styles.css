@@ -1471,7 +1471,7 @@ i.fa-copy{
   background: white;
   box-shadow: 
     0 8px 16px rgba(0, 85, 162, 0.8), /* SJSU Blue, more vivid */
-    0 12px 24px rgba(242, 169, 0, 0.5); /* SJSU Gold, more prominent */
+    0 12px 24px rgba(242, 169, 0, 0.8); /* SJSU Gold, more prominent */
   background-size: 400% 400%;
   animation: GradientBackground 15s ease infinite;
   
